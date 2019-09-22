@@ -1,0 +1,49 @@
+{
+	"name": "@elzup/eslint-config",
+	"version": "1.0.0",
+	"description": "my eslint config",
+	"main": "index.js",
+	"repository": "https://github.com/elzup/eslint-config",
+	"author": "elzup",
+	"license": "MIT",
+	"engines": {
+		"node": ">=8"
+	},
+	"keywords": [
+		"eslint",
+		"prettier",
+		"react",
+		"typescript"
+	],
+	"scripts": {
+		"fmt": "prettier --write '*.{js,json,md}'"
+	},
+	"dependencies": {
+		"@typescript-eslint/eslint-plugin": "^2.3.0",
+		"@typescript-eslint/parser": "^2.3.0",
+		"babel-eslint": "^10.0.3",
+		"eslint-config-prettier": "^6.3.0",
+		"eslint-plugin-import": "^2.18.2",
+		"eslint-plugin-prettier": "^3.1.1"
+	},
+	"devDependencies": {
+		"eslint": "^6.4.0",
+		"prettier": "^1.18.2",
+		"typescript": "^3.6.3"
+	},
+	"peerDependencies": {
+		"eslint": ">= 3",
+		"typescript": ">=3.0.0"
+	},
+	"lint-staged": {
+		"*.{js,json,md}": [
+			"prettier --write",
+			"git add"
+		]
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	}
+}
