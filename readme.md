@@ -33,3 +33,11 @@ npm i -D @elzup/eslint-config
   "extends": ["@elzup/eslint-config", "@elzup/eslint-config/typescript"]
 }
 ```
+
+### jest
+
+```
+{
+  "extends": ["@elzup/eslint-config", "@elzup/eslint-config/jest"]
+}
+```
