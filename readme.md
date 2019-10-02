@@ -1,10 +1,10 @@
-# @elzup/eslint-config
+# eslint-config-nzap
 
 
 ## Usage
 
 ```
-npm i -D @elzup/eslint-config
+npm i -D eslint-config-nzap
 ```
 
 
@@ -14,7 +14,7 @@ npm i -D @elzup/eslint-config
 
 ```
 {
-  "extends": "@elzup/eslint-config"
+  "extends": "nzap"
 }
 ```
 
@@ -22,7 +22,7 @@ npm i -D @elzup/eslint-config
 
 ```
 {
-  "extends": ["@elzup/eslint-config", "@elzup/eslint-config/react"]
+  "extends": ["nzap", "nzap/react"]
 }
 ```
 
@@ -30,7 +30,7 @@ npm i -D @elzup/eslint-config
 
 ```
 {
-  "extends": ["@elzup/eslint-config", "@elzup/eslint-config/typescript"]
+  "extends": ["nzap", "nzap/typescript"]
 }
 ```
 
@@ -38,6 +38,6 @@ npm i -D @elzup/eslint-config
 
 ```
 {
-  "extends": ["@elzup/eslint-config", "@elzup/eslint-config/jest"]
+  "extends": ["nzap", "nzap/jest"]
 }
 ```

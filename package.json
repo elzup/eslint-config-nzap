@@ -1,9 +1,9 @@
 {
-	"name": "@elzup/eslint-config",
-	"version": "1.5.2",
+	"name": "eslint-config-nzap",
+	"version": "2.0.0",
 	"description": "my eslint config",
 	"main": "index.js",
-	"repository": "https://github.com/elzup/eslint-config",
+	"repository": "https://github.com/elzup/eslint-config-nzap",
 	"author": "elzup",
 	"license": "MIT",
 	"engines": {
@@ -13,6 +13,7 @@
 		"eslint",
 		"prettier",
 		"react",
+		"jest",
 		"typescript"
 	],
 	"scripts": {
@@ -23,7 +24,7 @@
 		"@typescript-eslint/parser": "^2.3.2",
 		"babel-eslint": "^10.0.3",
 		"eslint-config-prettier": "^6.3.0",
-		"eslint-plugin-import": "^2.18.2",
+		"eslint-plugin-import": "^2.17.2",
 		"eslint-plugin-jest": "^22.17.0",
 		"eslint-plugin-prettier": "^3.1.1",
 		"eslint-plugin-react": "^7.15.1",
