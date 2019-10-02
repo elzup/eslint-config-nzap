@@ -1,6 +1,6 @@
 module.exports = {
 	parser: '@typescript-eslint/parser',
-	extends: ['prettier/@typescript-eslint'],
+	extends: ['prettier/@typescript-eslint', 'plugin:import/typescript'],
 	plugins: ['@typescript-eslint'],
 	parserOptions: {
 		// バージョンエラーを抑制
@@ -9,6 +9,7 @@ module.exports = {
 		jsx: true,
 		project: 'tsconfig.json',
 	},
+
 	settings: {
 		'import/resolver': {
 			node: {
