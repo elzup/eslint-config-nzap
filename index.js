@@ -8,7 +8,18 @@ module.exports = {
 		},
 	},
 	env: { browser: true, node: true, es6: true },
-	extends: ['./rules/best-practices.js', './import.js', 'prettier'],
+	extends: [
+		'./rules/possible-errors.js',
+		'./rules/best-practices.js',
+		'./rules/variables.js',
+		'./rules/node-common.js',
+		'./rules/stylistic-issues.js',
+		'./rules/es6.js',
+		'./import.js',
+		'prettier',
+	],
 	plugins: ['prettier'],
-	rules: {},
+	rules: {
+		strict: 0,
+	},
 }
