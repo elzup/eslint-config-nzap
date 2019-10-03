@@ -8,7 +8,7 @@ module.exports = {
 		},
 	},
 	env: { browser: true, node: true, es6: true },
-	extends: ['./import.js', 'prettier'],
+	extends: ['./rules/best-practices.js', './import.js', 'prettier'],
 	plugins: ['prettier'],
 	rules: {},
 }

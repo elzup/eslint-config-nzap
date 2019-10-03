@@ -1,9 +1,9 @@
 {
 	"name": "eslint-config-nzap",
-	"version": "2.0.0",
+	"version": "1.0.0",
 	"description": "my eslint config",
 	"main": "index.js",
-	"repository": "https://github.com/elzup/eslint-config-nzap",
+	"repository": "elzup/eslint-config-nzap",
 	"author": "elzup",
 	"license": "MIT",
 	"engines": {
@@ -17,7 +17,14 @@
 		"typescript"
 	],
 	"scripts": {
-		"fmt": "prettier --write '*.{js,json,md}'"
+		"fmt": "prettier --write '*.{js,json,md}'",
+		"lint": "eslint -c ./index.js index.js",
+		"find-new-rules": "npm-run-all --parallel find-new-rules:*",
+		"find-new-rules:jest": "eslint-find-rules --unused -v ./test/jest.js",
+		"find-new-rules:ts": "eslint-find-rules --unused -v ./test/ts.js",
+		"find-new-rules:main": "eslint-find-rules --unused -v ./index.js",
+		"eslint-check": "eslint --print-config .eslintrc | eslint-config-prettier-check",
+		"test": "yarn lint"
 	},
 	"dependencies": {
 		"@typescript-eslint/eslint-plugin": "^2.3.2",
@@ -32,6 +39,8 @@
 	},
 	"devDependencies": {
 		"eslint": "6.5.1",
+		"eslint-find-rules": "^3.4.0",
+		"npm-run-all": "^4.1.5",
 		"prettier": "1.18.2",
 		"typescript": "3.6.3"
 	},
