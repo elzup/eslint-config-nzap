@@ -104,7 +104,7 @@ module.exports = {
 		'@typescript-eslint/no-useless-constructor': 'error',
 		'@typescript-eslint/no-type-alias': 'off',
 
-		'no-unused-vars': 'warn',
+		'no-unused-vars': 'off',
 		'@typescript-eslint/no-unused-vars': 'warn',
 		// TODO: ジェネリックで使用される型には効かないの修正されるまでOFF
 		'@typescript-eslint/no-unused-vars': 'off',
