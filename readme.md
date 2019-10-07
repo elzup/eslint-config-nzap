@@ -41,3 +41,6 @@ npm i -D eslint-config-nzap
   "extends": ["nzap", "nzap/jest"]
 }
 ```
+
+### Thanks :tada:
+based by [akameco/eslint\-config\-precure](https://github.com/akameco/eslint-config-precure)
