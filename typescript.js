@@ -7,8 +7,7 @@ module.exports = {
 		warnOnUnsupportedTypeScriptVersion: false,
 		sourceType: 'module',
 		jsx: true,
-		// project: 'tsconfig.json',
-		project: null,
+		project: 'tsconfig.json',
 	},
 
 	settings: {
