@@ -106,8 +106,6 @@ module.exports = {
 
 		'no-unused-vars': 'off',
 		'@typescript-eslint/no-unused-vars': 'warn',
-		// TODO: ジェネリックで使用される型には効かないの修正されるまでOFF
-		'@typescript-eslint/no-unused-vars': 'off',
 		// '@typescript-eslint/no-unused-vars': [
 		// 'error',
 		// {
