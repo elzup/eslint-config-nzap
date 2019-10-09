@@ -21,10 +21,11 @@
 		"lint": "eslint -c ./index.js index.js",
 		"find-new-rules": "npm-run-all --parallel find-new-rules:*",
 		"find-new-rules:jest": "eslint-find-rules --unused -v ./test/jest.js",
-		"find-new-rules:ts": "eslint-find-rules --unused -v ./test/ts.js",
+		"find-new-rules:ts": "eslint-find-rules --unused -v ./test/with_typescript.js",
 		"find-new-rules:main": "eslint-find-rules --unused -v ./index.js",
 		"eslint-check": "eslint --print-config .eslintrc | eslint-config-prettier-check",
-		"test": "yarn lint"
+		"test": "yarn lint",
+		"test:tsx": "eslint -c ./test/with_tsx.js ./test/test.tsx"
 	},
 	"dependencies": {
 		"@typescript-eslint/eslint-plugin": "^2.3.2",
@@ -38,10 +39,12 @@
 		"eslint-plugin-react-hooks": "^2.1.2"
 	},
 	"devDependencies": {
+		"@types/react": "^16.9.5",
 		"eslint": "6.5.1",
 		"eslint-find-rules": "3.4.0",
 		"npm-run-all": "4.1.5",
 		"prettier": "1.18.2",
+		"react": "^16.10.2",
 		"typescript": "3.6.3"
 	},
 	"peerDependencies": {
