@@ -8,6 +8,8 @@ module.exports = {
 		sourceType: 'module',
 		jsx: true,
 		project: 'tsconfig.json',
+		// @see https://github.com/typescript-eslint/typescript-eslint/issues/967
+		createDefaultProgram: true,
 	},
 
 	settings: {
