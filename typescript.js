@@ -61,14 +61,8 @@ module.exports = {
 			{ properties: 'always', ignoreDestructuring: false },
 		],
 		'@typescript-eslint/class-name-casing': 'error',
-		'@typescript-eslint/explicit-function-return-type': [
-			'warn',
-			{
-				allowExpressions: true,
-				allowTypedFunctionExpressions: true,
-			},
-		],
-		// '@typescript-eslint/explicit-function-return-type': '',
+		// 記述が面倒
+		'@typescript-eslint/explicit-function-return-type': 'off',
 		// すべてがpublicであるべき
 		'@typescript-eslint/explicit-member-accessibility': [
 			'error',
