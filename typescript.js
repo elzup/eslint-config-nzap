@@ -99,18 +99,17 @@ module.exports = {
 		'@typescript-eslint/no-type-alias': 'off',
 
 		'no-unused-vars': 'off',
-		'@typescript-eslint/no-unused-vars': 'warn',
-		// '@typescript-eslint/no-unused-vars': [
-		// 'error',
-		// {
-		// vars: 'all',
-		// args: 'after-used',
-		// ignoreRestSiblings: true,
-		// argsIgnorePattern: '^_$',
-		// caughtErrors: 'all',
-		// caughtErrorsIgnorePattern: '^_$',
-		// },
-		// ],
+		'@typescript-eslint/no-unused-vars': [
+			'warn',
+			{
+				vars: 'all',
+				args: 'after-used',
+				ignoreRestSiblings: true,
+				argsIgnorePattern: '^_$',
+				caughtErrors: 'all',
+				caughtErrorsIgnorePattern: '^_$',
+			},
+		],
 		'@typescript-eslint/no-var-requires': 'error',
 		// interfaceよりtype
 		'@typescript-eslint/consistent-type-definitions': ['error', 'type'],
