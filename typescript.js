@@ -94,7 +94,7 @@ module.exports = {
 		// 一旦 cosnt {props, state} = this; も無効
 		'@typescript-eslint/no-this-alias': 'error',
 		'@typescript-eslint/no-unnecessary-type-assertion': 'error',
-		'@typescript-eslint/no-use-before-define': 'error',
+		'@typescript-eslint/no-use-before-define': 'off',
 		'@typescript-eslint/no-useless-constructor': 'error',
 		'@typescript-eslint/no-type-alias': 'off',
 
