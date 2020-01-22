@@ -123,7 +123,7 @@ module.exports = {
 		'@typescript-eslint/semi': 'off',
 		// 挙動が怪しいのでOFFにする
 		'@typescript-eslint/promise-function-async': 'off',
-		'@typescript-eslint/no-require-imports': 'error',
+		'@typescript-eslint/no-require-imports': 'off',
 		'@typescript-eslint/no-for-in-array': 'error',
 		'@typescript-eslint/require-array-sort-compare': 'error',
 		'@typescript-eslint/prefer-function-type': 'error',
