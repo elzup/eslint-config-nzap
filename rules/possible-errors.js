@@ -1,5 +1,6 @@
 module.exports = {
 	rules: {
+		'for-direction': 0,
 		// disallow trailing commas in object literals
 		'comma-dangle': 0,
 		// disallow assignment in conditional expressions

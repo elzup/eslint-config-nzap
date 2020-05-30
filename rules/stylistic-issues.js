@@ -8,6 +8,7 @@ module.exports = {
 		'brace-style': [2, '1tbs', { allowSingleLine: true }],
 		// require camel case names
 		camelcase: 2,
+		'capitalized-comments': 0,
 		// enforce spacing before and after comma
 		'comma-spacing': 0,
 		// enforce one true comma style
