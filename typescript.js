@@ -56,11 +56,19 @@ module.exports = {
 		// 悩ましいがts-ignoreは使わざる得ない場合がある
 		'@typescript-eslint/ban-ts-ignore': 'off',
 		camelcase: 'off',
-		'@typescript-eslint/camelcase': [
+		'@typescript-eslint/naming-convention': [
 			'error',
-			{ properties: 'always', ignoreDestructuring: false },
+			{ selector: 'default', format: ['camelCase', 'PascalCase'] },
+			{ selector: 'class', format: ['camelCase'] },
+			{ selector: 'typeAlias', format: ['PascalCase'] },
+			{ selector: 'property', format: null },
+			{
+				selector: 'variable',
+				format: ['camelCase'],
+				leadingUnderscore: 'allow',
+				trailingUnderscore: 'allow',
+			},
 		],
-		'@typescript-eslint/class-name-casing': 'error',
 		// 記述が面倒
 		'@typescript-eslint/explicit-function-return-type': 'off',
 		// すべてがpublicであるべき
@@ -68,15 +76,10 @@ module.exports = {
 			'error',
 			{ accessibility: 'no-public' },
 		],
-		// Tまたは2文字以上の任意の文字列を許容する
-		'@typescript-eslint/generic-type-naming': ['error', '^T$|^[A-Z][a-zA-Z]+$'],
 		// prettier
 		'@typescript-eslint/indent': 'off',
-		'@typescript-eslint/interface-name-prefix': ['error', 'never'],
 		// prettierで自動修正
 		'@typescript-eslint/member-delimiter-style': 'off',
-		// TypeScript以外のデバックツールで役に立つ。また今後private(#)への置換が楽
-		'@typescript-eslint/member-naming': ['error', { private: '^_' }],
 		'@typescript-eslint/consistent-type-assertions': 'off',
 		// 自動修正されないのでうるさい可能性が大きい
 		'@typescript-eslint/member-ordering': 'error',
