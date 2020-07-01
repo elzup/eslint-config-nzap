@@ -1,5 +1,9 @@
 import React, { useEffect } from 'react'
 
+const Span = () => {
+	return <span>Hello</span>
+}
+
 function App() {
 	useEffect(() => {
 		console.log('hello')
@@ -8,7 +12,12 @@ function App() {
 		}
 	}, [])
 
-	return <h1>ESLint Test</h1>
+	return (
+		<div>
+			<h1>ESLint Test</h1>
+			<Span />
+		</div>
+	)
 }
 
 export default App
