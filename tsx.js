@@ -18,7 +18,7 @@ module.exports = {
 			{ selector: 'property', format: null },
 			{
 				selector: 'variable',
-				format: ['camelCase', 'PascalCase'], // React component のため
+				format: ['camelCase', 'PascalCase', 'UPPER_CASE'], // React component のため
 				leadingUnderscore: 'allow',
 				trailingUnderscore: 'allow',
 			},
