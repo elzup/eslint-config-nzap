@@ -3,6 +3,12 @@
 [![npm version](https://badge.fury.io/js/chch.svg)](https://badge.fury.io/js/eslint-config-nzap)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+## Policy
+
+- Processing weight reduction
+  - Fewer enabled rules
+- Does not hinder development freedom
+
 ## Usage
 
 ```
