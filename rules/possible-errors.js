@@ -88,6 +88,7 @@ module.exports = {
 		// disallow useless backreferences in regular expressions
 		'no-useless-backreference': 0,
 		// disallow assignments that can lead to race conditions due to usage of await or yield
+		// IDU: I don't understand
 		'require-atomic-updates': 0,
 		// disallow comparisons with the value NaN
 		'use-isnan': 2,

@@ -9,6 +9,8 @@ module.exports = {
 		// require camel case names
 		camelcase: 2,
 		'capitalized-comments': 0,
+		// disallow trailing commas in object literals
+		'comma-dangle': 0,
 		// enforce spacing before and after comma
 		'comma-spacing': 0,
 		// enforce one true comma style

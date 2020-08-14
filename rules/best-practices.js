@@ -1,25 +1,36 @@
 module.exports = {
 	rules: {
-		// Enforces getter/setter pairs in objects
+		// enforces getter/setter pairs in objects
 		'accessor-pairs': 0,
+		// enforces return statements in callbacks of array's methods
+		'array-callback-return': 2,
 		// treat var statements as if they were block scoped
 		'block-scoped-var': 0,
+		// enforce that class methods utilize `this`
+		'class-methods-use-this': 0,
 		// specify the maximum cyclomatic complexity allowed in a program
 		complexity: 0,
 		// require return statements to either always or never specify values
-		'consistent-return': 0,
+		'consistent-return': 2,
 		// specify curly brace conventions for all control statements
-		curly: [2, 'all'],
+		curly: 0,
 		// require default case in switch statements
-		'default-case': 2,
+		'default-case': 0,
+		// enforce default clauses in switch statements to be last
+		'default-case-last': 0,
+		// enforce default parameters to be last
+		'default-param-last': 2,
 		// enforces consistent newlines before or after dots
-		'dot-location': [2, 'object'],
+		'dot-location': 0,
 		// encourages use of dot notation whenever possible
 		'dot-notation': 0,
 		// require the use of === and !==
-		eqeqeq: 0,
+		eqeqeq: 2,
+		// require grouped accessor pairs in object literals and classes
+		'grouped-accessor-pairs': 0,
 		// make sure for-in loops have an if statement
-		'guard-for-in': 2,
+		// IDU: I don't understand
+		'guard-for-in': 0,
 		// disallow the use of alert, confirm, and prompt
 		'no-alert': 0,
 		// disallow use of arguments.caller or arguments.callee

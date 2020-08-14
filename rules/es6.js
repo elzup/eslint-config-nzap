@@ -1,6 +1,5 @@
 module.exports = {
 	rules: {
-		'array-callback-return': 0,
 		// require braces in arrow function body
 		'arrow-body-style': 0,
 		// require parens in arrow function arguments
