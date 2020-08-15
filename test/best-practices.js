@@ -108,39 +108,181 @@ for (var key in obj) {
 }
 
 // OK 'max-classes-per-file'
+class _Foo {}
+class _Bar {}
+
 // OK 'no-alert'
+alert()
+
 // OK 'no-caller'
-// OK 'no-case-declarations'
+
+function _foo2(n) {
+	if (n <= 0) {
+		return
+	}
+
+	arguments.callee(n - 1)
+}
+
+// NG 'no-case-declarations'
+
+switch (foo) {
+	case 1:
+		// eslint-disable-next-line no-case-declarations
+		let x = 1
+
+		break
+	case 2:
+		// eslint-disable-next-line no-case-declarations
+		const y = 2
+
+		break
+}
+
 // OK 'no-constructor-return'
+class _A {
+	constructor(a) {
+		this.a = a
+		return a
+	}
+}
+
 // OK 'no-div-regex'
+const reg2 = /[=]foo/
+
 // OK 'no-else-return'
+function _foo3() {
+	if (x) {
+		return 0
+	} else {
+		return 2
+	}
+}
+
 // OK 'no-empty-function'
+function _foo4() {}
+
 // OK 'no-empty-pattern'
+var {} = obj
+
 // OK 'no-eq-null'
-// OK 'no-eval'
-// OK 'no-extend-native'
+// eslint-disable-next-line eqeqeq
+const res = foo == null
+
+// NG 'no-eval'
+// eslint-disable-next-line no-eval
+var foo2 = eval
+
+foo2('var a = 0')
+
+// NG 'no-extend-native'
+// eslint-disable-next-line no-extend-native
+Object.prototype.a = 'a'
+// eslint-disable-next-line no-extend-native
+Object.defineProperty(Array.prototype, 'times', { value: 999 })
+
 // OK 'no-extra-bind'
+var x = function () {
+	foo()
+}
+
 // OK 'no-extra-label'
-// OK 'no-fallthrough'
+A: while (a) {
+	break A
+}
+
+// NG 'no-fallthrough'
+switch (foo) {
+	case 1:
+		console.log()
+	// eslint-disable-next-line no-fallthrough
+	case 2:
+		console.log()
+}
+
 // OK 'no-floating-decimal'
-// OK 'no-global-assign'
+// prettier-ignore
+var num = .5
+
+// NG 'no-global-assign'
+// eslint-disable-next-line no-global-assign
+Object = null
+// eslint-disable-next-line no-global-assign
+undefined = 1
+
 // OK 'no-implicit-coercion'
+var b = !!foo
+
 // OK 'no-implicit-globals'
+var foo5 = 1
+
 // OK 'no-implied-eval'
-// OK 'no-invalid-this'
-// OK 'no-iterator'
+setTimeout("alert('Hi!');", 100)
+
+// NG 'no-invalid-this'
+// eslint-disable-next-line no-invalid-this
+this.a = 0
+
+// NG 'no-iterator'
+// eslint-disable-next-line no-iterator
+foo.__iterator__ = function () {}
+
 // OK 'no-labels'
+
+label: if (true) {
+}
+
 // OK 'no-lone-blocks'
+{
+	aLabel: {
+	}
+}
+
 // OK 'no-loop-func'
+var i = 10
+
+while (i) {
+	var foo5 = function () {
+		return i
+	}
+
+	foo5()
+}
+
 // OK 'no-magic-numbers'
+var dutyFreePrice = 100,
+	_finalPrice = dutyFreePrice + dutyFreePrice * 0.25
+
 // OK 'no-multi-spaces'
+// prettier-ignore
+if(foo   === "bar") {}
+
 // OK 'no-multi-str'
+var x = 'Line 1 \
+Line 2'
+
 // OK 'no-new'
+new A()
+
 // OK 'no-new-func'
+var x = Function('a', 'b', 'return a + b')
+
 // OK 'no-new-wrappers'
+// var stringObject = new String('Hello world')
+var stringObject = 'Hello world'
+
 // OK 'no-octal'
+// var num = 071
+
 // OK 'no-octal-escape'
-// OK 'no-param-reassign'
+// var _foo = 'Copyright \251'
+
+// NG 'no-param-reassign'
+function _foo8(bar) {
+	// eslint-disable-next-line no-param-reassign
+	bar++
+}
+
 // OK 'no-proto'
 // OK 'no-redeclare'
 // OK 'no-restricted-properties'

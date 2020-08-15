@@ -31,16 +31,22 @@ module.exports = {
 		// make sure for-in loops have an if statement
 		// IDU: I don't understand
 		'guard-for-in': 0,
+		// enforce a maximum number of classes per file
+		'max-classes-per-file': 0,
 		// disallow the use of alert, confirm, and prompt
 		'no-alert': 0,
 		// disallow use of arguments.caller or arguments.callee
 		'no-caller': 0,
 		// disallow lexical declarations in case clauses
-		'no-case-declarations': 0,
+		'no-case-declarations': 2,
+		// disallow returning value in constructor
+		'no-constructor-return': 0,
 		// disallow division operators explicitly at beginning of regular expression
 		'no-div-regex': 0,
 		// disallow else after a return in an if
 		'no-else-return': 0,
+		// disallow empty functions
+		'no-empty-function': 0,
 		// disallow use of empty destructuring patterns
 		'no-empty-pattern': 0,
 		// disallow comparisons to null without a type-checking operator
@@ -51,45 +57,48 @@ module.exports = {
 		'no-extend-native': 2,
 		// disallow unnecessary function binding
 		'no-extra-bind': 0,
+		// disallow Unnecessary Labels
+		'no-extra-label': 0,
 		// disallow fallthrough of case statements
-		'no-fallthrough': 0,
+		'no-fallthrough': 2,
 		// disallow the use of leading or trailing decimal points in numeric literals
 		'no-floating-decimal': 0,
+		// disallow assignment to native objects or read-only global variables
+		'no-global-assign': 2,
 		// disallow the type conversions with shorter notations
 		'no-implicit-coercion': 0,
+		// disallow declarations in the global scope
+		'no-implicit-globals': 0,
 		// disallow use of eval()-like methods
 		'no-implied-eval': 0,
 		// disallow this keywords outside of classes or class-like objects
 		'no-invalid-this': 2,
 		// disallow usage of __iterator__ property
-		'no-iterator': 0,
+		'no-iterator': 2,
 		// disallow use of labeled statements
 		'no-labels': 0,
 		// disallow unnecessary nested blocks
 		'no-lone-blocks': 0,
 		// disallow creation of functions within loops
-		'no-loop-func': 2,
+		'no-loop-func': 0,
 		// disallow the use of magic numbers
 		'no-magic-numbers': 0,
 		// disallow use of multiple spaces
 		'no-multi-spaces': 0,
 		// disallow use of multiline strings
-		'no-multi-str': 2,
-		// disallow reassignments of native objects
-		'no-native-reassign': 0,
+		'no-multi-str': 0,
+		// disallow new For Side Effects
+		'no-new': 0,
 		// disallow use of new operator for Function object
 		'no-new-func': 0,
 		// disallows creating new instances of String,Number, and Boolean
 		'no-new-wrappers': 0,
-		// disallow use of new operator when not part of the assignment or comparison
-		'no-new': 0,
-		// disallow use of octal escape sequences in string literals, such as
-		// var foo = "Copyright \251";
-		'no-octal-escape': 0,
 		// disallow use of (old style) octal literals
 		'no-octal': 0,
+		// disallow use of octal escape sequences in string literals, such as
+		'no-octal-escape': 0,
 		// disallow reassignment of function parameters
-		'no-param-reassign': 0,
+		'no-param-reassign': 2,
 		// disallow use of process.env
 		'no-process-env': 0,
 		// disallow usage of __proto__ property
