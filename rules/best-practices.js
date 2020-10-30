@@ -119,20 +119,40 @@ module.exports = {
 		'no-sequences': 0,
 		// restrict what can be thrown as an exception
 		'no-throw-literal': 0,
+		// disallow unmodified conditions of loops
+		'no-unmodified-loop-condition': 0,
 		// disallow usage of expressions in statement position
-		'no-unused-expressions': 0,
+		'no-unused-expressions': 1,
+		// disallow Unused Labels
+		'no-unused-labels': 0,
 		// disallow unnecessary .call() and .apply()
 		'no-useless-call': 0,
+		// disallow unnecessary catch clauses
+		'no-useless-catch': 0,
 		// disallow unnecessary concatenation of literals or template literals
 		'no-useless-concat': 0,
+		// disallow unnecessary escape usage
+		'no-useless-escape': 0,
+		// disallow redundant return statements
+		'no-useless-return': 0,
 		// disallow use of void operator
 		'no-void': 0,
 		// disallow usage of configurable warning terms in comments: e.g. todo
 		'no-warning-comments': 0,
 		// disallow use of the with statement
 		'no-with': 2,
+		// suggest using named capture group in regular expression
+		'prefer-named-capture-group': 0,
+		// require using Error objects as Promise rejection reasons
+		'prefer-promise-reject-errors': 0,
+		// disallow use of the RegExp constructor in favor of regular expression literals
+		'prefer-regex-literals': 0,
 		// require use of the second argument for parseInt()
 		radix: 0,
+		// disallow async functions which have no await expression
+		'require-await': 0,
+		// enforce the use of u flag on RegExp
+		'require-unicode-regexp': 0,
 		// requires to declare all vars on top of their containing scope
 		'vars-on-top': 0,
 		// require immediate function invocation to be wrapped in parentheses

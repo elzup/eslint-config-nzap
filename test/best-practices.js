@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+/* eslint-disable no-unused-expressions */
 
 const boo = false
 const foo = false
@@ -329,22 +330,87 @@ func(nsComp === nsComp)
 throw 0
 
 // OK 'no-unmodified-loop-condition'
-// OK 'no-unused-expressions'
+var nulCond = 0
+
+while (nulCond) {}
+
+// NG 'no-unused-expressions'
+0
+
 // OK 'no-unused-labels'
+NULabel: {
+}
+
 // OK 'no-useless-call'
+func.call(undefined, 1, 2, 3)
+
 // OK 'no-useless-catch'
+try {
+} catch (e) {
+	throw e
+}
+
 // OK 'no-useless-concat'
+;`no-use` + `less-concat`
+
 // OK 'no-useless-escape'
+// cannot test by auto fix
+// prettier-ignore
+;('#')
+
 // OK 'no-useless-return'
+function noUselessReturn() {
+	return
+}
+
 // OK 'no-void'
+const noVoid = () => void 0
+
 // OK 'no-warning-comments'
+// FIXME: NoWarningComments
+
 // OK 'no-with'
+const noWith = { a: '' }
+// with (noWIth) {
+// 	func(a)
+// }
+
 // OK 'prefer-named-capture-group'
+const pncGroup = /(ba[rz])/
+
+pncGroup.exec('bar')[1]
+
 // OK 'prefer-promise-reject-errors'
+
+Promise.reject(0)
+
 // OK 'prefer-regex-literals'
+new RegExp('abc')
+
 // OK 'radix'
+parseInt('077')
+
 // OK 'require-await'
+async function requireAwait() {
+	func()
+}
+
 // OK 'require-unicode-regexp'
+const ruRexep = /aaa/
+
 // OK 'vars-on-top'
+function varsOnTop() {
+	var first
+
+	first = true
+	var second
+}
+
 // OK 'wrap-iife'
+const wrapIife = (function () {
+	return { y: 1 }
+})()
+
 // OK 'yoda'
+if ('yd' === obj) {
+}
