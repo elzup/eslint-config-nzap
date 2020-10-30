@@ -99,16 +99,20 @@ module.exports = {
 		'no-octal-escape': 0,
 		// disallow reassignment of function parameters
 		'no-param-reassign': 2,
-		// disallow use of process.env
-		'no-process-env': 0,
 		// disallow usage of __proto__ property
 		'no-proto': 0,
 		// disallow declaring the same variable more then once
-		'no-redeclare': 0,
+		'no-redeclare': 2,
+		// disallow certain object properties
+		'no-restricted-properties': 0,
 		// disallow use of assignment in return statement
 		'no-return-assign': 0,
+		// disallows unnecessary return await
+		'no-return-await': 0,
 		// disallow use of `javascript:` urls.
 		'no-script-url': 0,
+		// disallow Self Assignment
+		'no-self-assign': 0,
 		// disallow comparisons where both sides are exactly the same
 		'no-self-compare': 0,
 		// disallow use of comma operator

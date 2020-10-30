@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 const boo = false
 const foo = false
 const func = () => {}
@@ -182,7 +184,7 @@ Object.prototype.a = 'a'
 Object.defineProperty(Array.prototype, 'times', { value: 999 })
 
 // OK 'no-extra-bind'
-var x = function () {
+var noExtraBind = function () {
 	foo()
 }
 
@@ -211,7 +213,7 @@ Object = null
 undefined = 1
 
 // OK 'no-implicit-coercion'
-var b = !!foo
+var noImplicitCoercion = !!foo
 
 // OK 'no-implicit-globals'
 var foo5 = 1
@@ -242,11 +244,11 @@ label: if (true) {
 var i = 10
 
 while (i) {
-	var foo5 = function () {
+	var noLoopFunc = function () {
 		return i
 	}
 
-	foo5()
+	noLoopFunc()
 }
 
 // OK 'no-magic-numbers'
@@ -258,14 +260,14 @@ var dutyFreePrice = 100,
 if(foo   === "bar") {}
 
 // OK 'no-multi-str'
-var x = 'Line 1 \
+var noMultiStr = 'Line 1 \
 Line 2'
 
 // OK 'no-new'
 new A()
 
 // OK 'no-new-func'
-var x = Function('a', 'b', 'return a + b')
+var noNewFunc = Function('a', 'b', 'return a + b')
 
 // OK 'no-new-wrappers'
 // var stringObject = new String('Hello world')
@@ -284,15 +286,48 @@ function _foo8(bar) {
 }
 
 // OK 'no-proto'
+const noProto = {}
+
+func(noProto.__proto__)
+
 // OK 'no-redeclare'
+var noRedeclare = 0
+// eslint-disable-next-line no-redeclare
+var noRedeclare = 0
+
 // OK 'no-restricted-properties'
+var noRestrictedProperties = { foo: 0 }
+
+func(noRestrictedProperties.foo)
+
 // OK 'no-return-assign'
+var nra = 0
+const noReturnAssign = () => (nra = 1)
+
 // OK 'no-return-await'
+async function noReturnAwait() {
+	return await noReturnAwait()
+}
+
 // OK 'no-script-url'
+location.href = 'javascript:void(0)'
+
 // OK 'no-self-assign'
+let nsa = 0
+
+nsa = nsa
+
 // OK 'no-self-compare'
+const nsComp = 10
+
+func(nsComp === nsComp)
+
 // OK 'no-sequences'
+0, 1
+
 // OK 'no-throw-literal'
+throw 0
+
 // OK 'no-unmodified-loop-condition'
 // OK 'no-unused-expressions'
 // OK 'no-unused-labels'
