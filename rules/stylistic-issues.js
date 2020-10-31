@@ -83,7 +83,7 @@ module.exports = {
 		// disallow nested ternary expressions
 		'no-nested-ternary': 0,
 		// disallow use of the Object constructor
-		'no-new-object': 2,
+		'no-new-object': 0,
 		// disallow use of unary operators, ++ and --
 		'no-plusplus': 0,
 		// disallow use of certain syntax in code

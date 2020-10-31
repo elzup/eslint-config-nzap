@@ -1,40 +1,37 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-unused-expressions */
 
-const boo = false
-const foo = false
 const func = () => {}
 const obj = {}
+const v = false
 
-// NG 'accessor-pairs'
-// eslint-disable-next-line for-direction
+class Item {}
 
-var _o = {
+// OK 'accessor-pairs'
+var aPairs = {
 	set a(value) {
 		this.val = value
 	},
 }
 
 // NG 'array-callback-return'
-const myArray = []
-const nodes = []
+const acr1 = []
 // eslint-disable-next-line array-callback-return
-var indexMap = myArray.reduce(function (memo, item, index) {
+const acr2 = acr1.reduce((memo, item, index) => {
 	memo[item] = index
 }, {})
 
 // OK 'block-scoped-var'
-
-function doIf() {
+function blockScopedVar() {
 	if (true) var build = true
 
-	console.log(build)
+	func(build)
 }
 
 // OK 'class-methods-use-this'
-class A {
+class CmuThis {
 	foo() {
-		console.log(
+		func(
 			'Hello World'
 		) /*error Expected 'this' to be used by class method 'foo'.*/
 	}
@@ -42,7 +39,7 @@ class A {
 
 // OK 'complexity'
 
-function a(x) {
+function complexity(x) {
 	if (true) return x
 	else if (false) return x + 1
 	else return 4 // 3rd path
@@ -51,23 +48,23 @@ function a(x) {
 // NG 'consistent-return'
 
 // eslint-disable-next-line consistent-return
-function _doSomething(condition) {
+function cReturn(condition) {
 	if (condition) return true
 }
 
 // OK 'curly'
 
-if (boo) console.log('')
+if (true) func()
 
 // OK 'default-case'
-switch (a) {
+switch (v) {
 	case 1:
 		/* code */
 		break
 }
 
 // OK 'default-case-last'
-switch (foo) {
+switch (v) {
 	default:
 		break
 	case -1:
@@ -77,25 +74,22 @@ switch (foo) {
 
 // NG 'default-param-last'
 // eslint-disable-next-line default-param-last
-function f(a, b = 0, c) {}
+const dpLast = (a, b = 0, c) => {}
 
-// NG 'dot-location'
+// OK 'dot-location'
 // prettier-ignore
-var _foo = obj
+const dLocation = obj
 .property
 
 // OK 'dot-notation'
-var x = foo['bar']
+const dNotation = obj['bar']
 
 // NG 'eqeqeq'
-var b = 10
-
 // eslint-disable-next-line eqeqeq
-if (10 == 42) {
-}
+const eee = 10 == 42
 
 // OK 'grouped-accessor-pairs'
-var o = {
+var gaPairs = {
 	get a() {
 		return this.val
 	},
@@ -105,45 +99,35 @@ var o = {
 	},
 }
 
-// OK 'guard-for-in'
+// NG 'guard-for-in'
+// eslint-disable-next-line guard-for-in
 for (var key in obj) {
-	func(key)
 }
 
 // OK 'max-classes-per-file'
-class _Foo {}
-class _Bar {}
+class McpFile1 {}
+class McpFile2 {}
 
 // OK 'no-alert'
-alert()
+if (false) alert()
 
 // OK 'no-caller'
-
-function _foo2(n) {
-	if (n <= 0) {
-		return
-	}
-
+function nCaller(n) {
+	if (n <= 0) return
 	arguments.callee(n - 1)
 }
 
 // NG 'no-case-declarations'
-
-switch (foo) {
+switch (v) {
 	case 1:
 		// eslint-disable-next-line no-case-declarations
 		let x = 1
 
 		break
-	case 2:
-		// eslint-disable-next-line no-case-declarations
-		const y = 2
-
-		break
 }
 
 // OK 'no-constructor-return'
-class _A {
+class NcReturn {
 	constructor(a) {
 		this.a = a
 		return a
@@ -155,7 +139,7 @@ const reg2 = /[=]foo/
 
 // OK 'no-else-return'
 function _foo3() {
-	if (x) {
+	if (v) {
 		return 0
 	} else {
 		return 2
@@ -163,20 +147,17 @@ function _foo3() {
 }
 
 // OK 'no-empty-function'
-function _foo4() {}
+function neFunc() {}
 
 // OK 'no-empty-pattern'
-var {} = obj
+const {} = obj
 
 // OK 'no-eq-null'
-// eslint-disable-next-line eqeqeq
-const res = foo == null
+const neNull = v === null
 
 // NG 'no-eval'
 // eslint-disable-next-line no-eval
-var foo2 = eval
-
-foo2('var a = 0')
+eval('var a = 0')
 
 // NG 'no-extend-native'
 // eslint-disable-next-line no-extend-native
@@ -185,129 +166,121 @@ Object.prototype.a = 'a'
 Object.defineProperty(Array.prototype, 'times', { value: 999 })
 
 // OK 'no-extra-bind'
-var noExtraBind = function () {
-	foo()
-}
+const neBind = (() => {
+	func()
+}).bind(null)
 
 // OK 'no-extra-label'
-A: while (a) {
-	break A
+neLabel: while (v) {
+	break neLabel
 }
 
 // NG 'no-fallthrough'
-switch (foo) {
+switch (v) {
 	case 1:
-		console.log()
+		func()
 	// eslint-disable-next-line no-fallthrough
 	case 2:
-		console.log()
+		func()
 }
 
 // OK 'no-floating-decimal'
 // prettier-ignore
-var num = .5
+const nfDecimal = .5
 
 // NG 'no-global-assign'
-// eslint-disable-next-line no-global-assign
-Object = null
-// eslint-disable-next-line no-global-assign
-undefined = 1
+// Object = null
+// undefined = 1
 
 // OK 'no-implicit-coercion'
-var noImplicitCoercion = !!foo
+const niCoercion = !!v
 
 // OK 'no-implicit-globals'
-var foo5 = 1
+const niGlobals = 1
 
 // OK 'no-implied-eval'
-setTimeout("alert('Hi!');", 100)
+setTimeout("niEval = 'Hi!'", 100)
 
 // NG 'no-invalid-this'
 // eslint-disable-next-line no-invalid-this
-this.a = 0
+this.niThis = 0
 
 // NG 'no-iterator'
 // eslint-disable-next-line no-iterator
-foo.__iterator__ = function () {}
+obj.__iterator__ = function () {}
 
 // OK 'no-labels'
-
-label: if (true) {
+noLabel: if (true) {
 }
 
 // OK 'no-lone-blocks'
 {
-	aLabel: {
-	}
+	func()
 }
 
 // OK 'no-loop-func'
-var i = 10
-
-while (i) {
-	var noLoopFunc = function () {
-		return i
-	}
-
-	noLoopFunc()
+for (var i = 10; i; i--) {
+	;(() => i)()
 }
 
 // OK 'no-magic-numbers'
-var dutyFreePrice = 100,
-	_finalPrice = dutyFreePrice + dutyFreePrice * 0.25
+var nmNum = 100,
+	nmNum2 = nmNum + nmNum * 0.25
 
 // OK 'no-multi-spaces'
 // prettier-ignore
-if(foo   === "bar") {}
+if(v   === "bar") {}
 
 // OK 'no-multi-str'
-var noMultiStr = 'Line 1 \
+var nmStr = 'Line 1 \
 Line 2'
 
 // OK 'no-new'
-new A()
+new Item()
 
 // OK 'no-new-func'
-var noNewFunc = Function('a', 'b', 'return a + b')
+var nnFunc = Function('a', 'b', 'return a + b')
 
 // OK 'no-new-wrappers'
-// var stringObject = new String('Hello world')
-var stringObject = 'Hello world'
+var nnWraps = new String('hello')
 
 // OK 'no-octal'
-// var num = 071
+// var nOct = 071
 
 // OK 'no-octal-escape'
-// var _foo = 'Copyright \251'
+// var noEsc = 'Copyright \251'
 
 // NG 'no-param-reassign'
-function _foo8(bar) {
+function npReassign(bar) {
 	// eslint-disable-next-line no-param-reassign
 	bar++
 }
 
 // OK 'no-proto'
-const noProto = {}
+const nProto = {}
 
-func(noProto.__proto__)
+func(nProto.__proto__)
 
 // OK 'no-redeclare'
-var noRedeclare = 0
-// eslint-disable-next-line no-redeclare
-var noRedeclare = 0
+var nRedec = 0
+
+{
+	// eslint-disable-next-line no-redeclare
+	var nRedec = 0
+}
 
 // OK 'no-restricted-properties'
-var noRestrictedProperties = { foo: 0 }
+var nrProperties = { foo: 0 }
 
-func(noRestrictedProperties.foo)
+nrProperties.foo
 
 // OK 'no-return-assign'
 var nra = 0
-const noReturnAssign = () => (nra = 1)
+const nrAssign = () => (nra = 1)
 
 // OK 'no-return-await'
-async function noReturnAwait() {
-	return await noReturnAwait()
+async function nrAwait() {
+	return await nrAwait()
 }
 
 // OK 'no-script-url'
@@ -319,9 +292,7 @@ let nsa = 0
 nsa = nsa
 
 // OK 'no-self-compare'
-const nsComp = 10
-
-func(nsComp === nsComp)
+const nsComp = v === v
 
 // OK 'no-sequences'
 0, 1
@@ -330,15 +301,13 @@ func(nsComp === nsComp)
 throw 0
 
 // OK 'no-unmodified-loop-condition'
-var nulCond = 0
-
-while (nulCond) {}
+while (v) {}
 
 // NG 'no-unused-expressions'
 0
 
 // OK 'no-unused-labels'
-NULabel: {
+nuLabel: {
 }
 
 // OK 'no-useless-call'
@@ -359,18 +328,18 @@ try {
 ;('#')
 
 // OK 'no-useless-return'
-function noUselessReturn() {
+function nuReturn() {
 	return
 }
 
 // OK 'no-void'
-const noVoid = () => void 0
+const nVoid = () => void 0
 
 // OK 'no-warning-comments'
 // FIXME: NoWarningComments
 
-// OK 'no-with'
-const noWith = { a: '' }
+// NG 'no-with'
+const nWith = { a: '' }
 // with (noWIth) {
 // 	func(a)
 // }
@@ -407,7 +376,7 @@ function varsOnTop() {
 }
 
 // OK 'wrap-iife'
-const wrapIife = (function () {
+const wIife = (function () {
 	return { y: 1 }
 })()
 

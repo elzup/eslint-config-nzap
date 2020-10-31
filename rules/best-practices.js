@@ -29,8 +29,7 @@ module.exports = {
 		// require grouped accessor pairs in object literals and classes
 		'grouped-accessor-pairs': 0,
 		// make sure for-in loops have an if statement
-		// IDU: I don't understand
-		'guard-for-in': 0,
+		'guard-for-in': 2,
 		// enforce a maximum number of classes per file
 		'max-classes-per-file': 0,
 		// disallow the use of alert, confirm, and prompt
