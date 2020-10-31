@@ -22,7 +22,7 @@ const acr2 = acr1.reduce((memo, item, index) => {
 }, {})
 
 // OK 'block-scoped-var'
-function blockScopedVar() {
+function bsVar() {
 	if (true) var build = true
 
 	func(build)
@@ -38,7 +38,6 @@ class CmuThis {
 }
 
 // OK 'complexity'
-
 function complexity(x) {
 	if (true) return x
 	else if (false) return x + 1
@@ -46,14 +45,12 @@ function complexity(x) {
 }
 
 // NG 'consistent-return'
-
 // eslint-disable-next-line consistent-return
 function cReturn(condition) {
 	if (condition) return true
 }
 
 // OK 'curly'
-
 if (true) func()
 
 // OK 'default-case'
@@ -337,8 +334,7 @@ const nVoid = () => void 0
 // FIXME: NoWarningComments
 
 // NG 'no-with'
-const nWith = { a: '' }
-// with (noWIth) {
+// with (nWIth) {
 // 	func(a)
 // }
 
@@ -348,7 +344,6 @@ const pncGroup = /(ba[rz])/
 pncGroup.exec('bar')[1]
 
 // OK 'prefer-promise-reject-errors'
-
 Promise.reject(0)
 
 // OK 'prefer-regex-literals'
