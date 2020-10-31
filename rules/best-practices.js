@@ -21,6 +21,7 @@ module.exports = {
 		// enforce default parameters to be last
 		'default-param-last': 2,
 		// enforces consistent newlines before or after dots
+		//  [prettier cover]
 		'dot-location': 0,
 		// encourages use of dot notation whenever possible
 		'dot-notation': 0,
@@ -61,6 +62,7 @@ module.exports = {
 		// disallow fallthrough of case statements
 		'no-fallthrough': 2,
 		// disallow the use of leading or trailing decimal points in numeric literals
+		//  [prettier cover]
 		'no-floating-decimal': 0,
 		// disallow assignment to native objects or read-only global variables
 		'no-global-assign': 2,
@@ -83,6 +85,7 @@ module.exports = {
 		// disallow the use of magic numbers
 		'no-magic-numbers': 0,
 		// disallow use of multiple spaces
+		//  [prettier cover]
 		'no-multi-spaces': 0,
 		// disallow use of multiline strings
 		'no-multi-str': 0,
@@ -131,6 +134,7 @@ module.exports = {
 		// disallow unnecessary concatenation of literals or template literals
 		'no-useless-concat': 0,
 		// disallow unnecessary escape usage
+		//  [editor cover]
 		'no-useless-escape': 0,
 		// disallow redundant return statements
 		'no-useless-return': 0,

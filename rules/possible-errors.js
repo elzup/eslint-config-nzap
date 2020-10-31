@@ -11,8 +11,8 @@ module.exports = {
 		// disallow comparing against -0
 		'no-compare-neg-zero': 0,
 		// disallow assignment in conditional expressions
-		// prettier により括弧つけられるので気づく
-		'no-cond-assign': 2,
+		//  [prettier cover]
+		'no-cond-assign': 0,
 		// disallow use of console
 		'no-console': 0,
 		// disallow use of constant expressions in conditions
@@ -38,11 +38,12 @@ module.exports = {
 		// 書く可能性が低い
 		'no-ex-assign': 0,
 		// disallow double-negation boolean casts in a boolean context
-		'no-extra-boolean-cast': 2,
+		'no-extra-boolean-cast': 0,
 		// disallow unnecessary parentheses
-		'no-extra-parens': 2,
+		//  [prettier cover]
+		'no-extra-parens': 0,
 		// disallow unnecessary semicolons
-		// prettier に委ねる
+		//  [prettier cover]
 		'no-extra-semi': 0,
 		// disallow overwriting functions written as function declarations
 		'no-func-assign': 2,
@@ -53,6 +54,7 @@ module.exports = {
 		// disallow invalid regular expression strings in the RegExp constructor
 		'no-invalid-regexp': 2,
 		// disallow irregular whitespace outside of strings and comments
+		//  [prettier cover]
 		'no-irregular-whitespace': 0,
 		// disallow literal numbers that lose precision
 		// 重い
@@ -62,7 +64,7 @@ module.exports = {
 		// disallow the use of object properties of the global object (Math and JSON) as functions
 		'no-obj-calls': 0,
 		// disallow returning values from Promise executor functions
-		// 'no-promise-executor-return': 0,
+		'no-promise-executor-return': 0,
 		// disallow use of Object.prototypes builtins directly
 		'no-prototype-builtins': 0,
 		// disallow multiple spaces in a regular expression literal
@@ -75,6 +77,7 @@ module.exports = {
 		// ハイライトで気づく
 		'no-template-curly-in-string': 0,
 		// Avoid code that looks like two expressions but is actually one
+		//  [prettier cover]
 		'no-unexpected-multiline': 0,
 		// disallow unreachable statements after a return, throw, continue, or break statement
 		// エディタハイライトでわかる

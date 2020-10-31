@@ -1,19 +1,22 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-unused-expressions */
+
 import * as m from './module'
 
-const code = () => {
-	// void
-}
-const codePromise = new Promise()
-var x, y
+const func = () => {}
+const p = new Promise()
+const obj = {}
+
+let v = false
 
 // NG 'for-direction'
 // eslint-disable-next-line for-direction
-for (var i = 10; i >= 0; i++) {
-	code()
+for (let i = 10; i >= 0; i++) {
+	func()
 }
 
 // OK 'getter-return'
-var _p = {
+const gReturn = {
 	get name() {
 		'nicholas'
 	},
@@ -21,27 +24,26 @@ var _p = {
 
 // NG 'no-async-promise-executor
 // eslint-disable-next-line no-async-promise-executor
-const _foo = new Promise(async () => {
-	code()
+const napExector = new Promise(async () => {
+	func()
 })
 
 // OK 'no-await-in-loop'
-async function _foo2(things) {
+async function naiLoop(things) {
 	const results = []
 
 	for (const thing of things) {
-		results.push(await codePromise(thing))
+		results.push(await p(thing))
 	}
 }
 
 // OK 'no-compare-neg-zero'
 0 === -0
 
-// NG 'no-cond-assign'
+// OK 'no-cond-assign'
 // prettier-ignore
-// eslint-disable-next-line no-cond-assign
-if (x = 0) {
-	code()
+if (v = 0) {
+	func()
 }
 
 // OK 'no-console'
@@ -49,59 +51,47 @@ console.log()
 
 // OK 'no-constant-condition'
 if (false) {
-	code()
+	func()
 }
 
 // NG 'no-control-regex'
 // eslint-disable-next-line no-control-regex
-var _pattern1 = /\x1f/
+var ncRegex = /\x1f/
 
 // OK 'no-debugger'
-function _isTruthy() {
+const nDebugger = () => {
 	debugger
 }
 
-// OK 'no-dupe-args'
-// eslint-disable-next-line no-dupe-args
-function _foo3(_a, _b, _a) {
-	//
-}
+// NG 'no-dupe-args'
+// eslint-disable-next-line no-redeclare, no-dupe-args
+const ndArgs = (_a, _b, _a) => {}
 
 // NG 'no-dupe-else-if'
-if (x === 0) {
-	code()
-} else if (x === 1) {
-	code()
+if (v === 0) {
+} else if (v === 1) {
 	// eslint-disable-next-line no-dupe-else-if
-} else if (x === 1) {
-	code()
+} else if (v === 1) {
 }
 
 // NG 'no-dupe-keys'
-var _foo4 = {
+var ndKeys = {
 	bar: 'baz',
 	// eslint-disable-next-line no-dupe-keys
 	bar: 'qux',
 }
-const x1 = { a: 1 }
-const _y1 = { ...x1, a: 2 }
 
 // NG 'no-duplicate-case'
-switch (x) {
-	case 1:
-		break
+switch (v) {
 	case 2:
 		break
 	// eslint-disable-next-line no-duplicate-case
 	case 1: // duplicate test expression
 		break
-	default:
-		break
 }
 
 // OK 'no-empty'
-if (x) {
-}
+const nEmpty = () => {}
 
 // OK 'no-empty-character-class'
 ;/^abc[]/.test('abcdefg') // false
@@ -109,40 +99,35 @@ if (x) {
 
 // OK 'no-ex-assign'
 try {
-	// code
 } catch (e) {
 	e = 10
-	console.log(e)
 }
 
-// NG 'no-extra-boolean-cast'
-// eslint-disable-next-line no-extra-boolean-cast
-if (!!x) {
+// OK 'no-extra-boolean-cast'
+if (!!v) {
 }
 
-// NG 'no-extra-parens'
-// eslint-disable-next-line no-extra-parens
+// OK 'no-extra-parens'
 // prettier-ignore
-var _a = (4 * 10)
+var neParens = (4 * 10)
 
 // OK no-extra-semi
 // prettier-ignore
-code();
+func();
 
 // NG no-func-assign
-function _foo5() {}
+function nfAssign() {}
 // eslint-disable-next-line no-func-assign
-_foo5 = code
+nfAssign = func
 
 // NG no-import-assign
-// eslint-disable-next-line no-import-assign
-m = 10
+// m = 100
 
 // NG no-inner-declarations
-function _foo6() {
+function niDeclera() {
 	if (true) {
 		// eslint-disable-next-line no-inner-declarations
-		function _foo7() {}
+		function niDeclera2() {}
 	}
 }
 
@@ -158,50 +143,24 @@ RegExp('[')
 9007199254740993
 
 // OK no-misleading-character-class
-var _b = /^[👍]$/
+const nmcClass = /^[👍]$/
 
 // OK no-obj-calls
-var _math = new Math()
+const noCalls = new Math()
 
-// NG no-promise-executor-return
-new Promise((resolve, reject) => {
-	if (x) {
-		return null
-	}
-
-	code((err, result) => {
-		if (err) {
-			reject(err)
-		} else {
-			resolve(result)
-		}
-	})
-})
-
-new Promise((resolve, reject) =>
-	code((err, data) => {
-		if (err) {
-			reject(err)
-		} else {
-			resolve(data)
-		}
-	})
-)
-
+// OK no-promise-executor-return
 new Promise(() => {
 	return 1
 })
 
 // OK no-prototype-builtins
-var foo
-
-foo.hasOwnProperty('bar')
+obj.hasOwnProperty('bar')
 
 // OK no-regex-spaces
-var _re = /foo   bar/
+const neSpaces = /l   r/
 
 // OK no-setter-return
-var foo = {
+const nsReturn = {
 	set a(value) {
 		this.val = value
 		return value
@@ -210,34 +169,32 @@ var foo = {
 
 // NG no-sparse-arrays
 // eslint-disable-next-line no-sparse-arrays
-var _items = [,]
-// eslint-disable-next-line no-sparse-arrays
-var _colors = ['red', , 'blue']
+const nsArrays = [, 'red', , 'blue']
 
 // OK no-template-curly-in-string
-var _s = 'Time: ${12 * 60 * 60 * 1000}'
+const ntciString = 'Time: ${12 * 60 * 60 * 1000}'
 
 // OK no-unexpected-multiline
 // prettier-ignore
-var foo = code
+const nuMultiline = func
 (1 || 2).baz()
 
 // OK no-unreachable
-function _fn() {
-	x = 1
-	return x
-	x = 3 // this will never execute
+function nUnreachable() {
+	v = 1
+	return v
+	v = 3 // this will never execute
 }
 
 // OK no-unreachable-loop
-while (foo) {
-	code(foo)
-	foo = foo.parent
+while (v) {
+	func(v)
+	v = v.parent
 	break
 }
 
 // OK no-unsafe-finally
-function _foo7() {
+function nuFinally() {
 	try {
 		return 1
 	} catch (_e) {
@@ -249,30 +206,30 @@ function _foo7() {
 
 // NG no-unsafe-negation
 // eslint-disable-next-line no-unsafe-negation
-if (!y in x) {
+if (!0 in v) {
 }
 
 // OK no-useless-backreference
 ;/^(?:(a)|\1b)$/ // reference to (a) into another alternative
 
 // OK require-atomic-updates
-let result
+let rau
 
-async function _foo8() {
-	result = (await code) + result
-	let tmp = await code
+async function raUpdates() {
+	rau = (await p) + rau
+	let tmp = await p
 
-	result += tmp
+	rau += tmp
 	let _localVariable = 0
 
-	_localVariable += await code
+	_localVariable += await p
 }
 
 // NG use-isnan
 // eslint-disable-next-line use-isnan
-if (foo === NaN) {
+if (v === NaN) {
 }
 
 // NG valid-typeof
 // eslint-disable-next-line valid-typeof
-typeof foo === 'strnig'
+typeof v === 'strnig'

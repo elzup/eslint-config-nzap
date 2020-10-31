@@ -8,7 +8,7 @@ const v = false
 class Item {}
 
 // OK 'accessor-pairs'
-var aPairs = {
+const aPairs = {
 	set a(value) {
 		this.val = value
 	},
@@ -89,7 +89,7 @@ const dNotation = obj['bar']
 const eee = 10 == 42
 
 // OK 'grouped-accessor-pairs'
-var gaPairs = {
+const gaPairs = {
 	get a() {
 		return this.val
 	},
@@ -101,7 +101,7 @@ var gaPairs = {
 
 // NG 'guard-for-in'
 // eslint-disable-next-line guard-for-in
-for (var key in obj) {
+for (const key in obj) {
 }
 
 // OK 'max-classes-per-file'
@@ -138,7 +138,7 @@ class NcReturn {
 const reg2 = /[=]foo/
 
 // OK 'no-else-return'
-function _foo3() {
+function neReturn() {
 	if (v) {
 		return 0
 	} else {
@@ -157,7 +157,7 @@ const neNull = v === null
 
 // NG 'no-eval'
 // eslint-disable-next-line no-eval
-eval('var a = 0')
+eval('const a = 0')
 
 // NG 'no-extend-native'
 // eslint-disable-next-line no-extend-native
@@ -219,12 +219,12 @@ noLabel: if (true) {
 }
 
 // OK 'no-loop-func'
-for (var i = 10; i; i--) {
+for (let i = 10; i; i--) {
 	;(() => i)()
 }
 
 // OK 'no-magic-numbers'
-var nmNum = 100,
+const nmNum = 100,
 	nmNum2 = nmNum + nmNum * 0.25
 
 // OK 'no-multi-spaces'
@@ -232,7 +232,7 @@ var nmNum = 100,
 if(v   === "bar") {}
 
 // OK 'no-multi-str'
-var nmStr = 'Line 1 \
+const nmStr = 'Line 1 \
 Line 2'
 
 // OK 'no-new'
@@ -323,9 +323,7 @@ try {
 ;`no-use` + `less-concat`
 
 // OK 'no-useless-escape'
-// cannot test by auto fix
-// prettier-ignore
-;('#')
+// ;"\'"
 
 // OK 'no-useless-return'
 function nuReturn() {
