@@ -24,7 +24,7 @@
 		"find-new-rules:ts": "eslint-find-rules --unused -v ./test/with_typescript.js",
 		"find-new-rules:main": "eslint-find-rules --unused -v ./index.js",
 		"eslint-check": "eslint --print-config .eslintrc | eslint-config-prettier-check",
-		"test": "yarn lint",
+		"test": "eslint -c ./index.js test/*.js",
 		"test:tsx": "eslint -c ./test/with_tsx.js ./test/test.tsx"
 	},
 	"dependencies": {
