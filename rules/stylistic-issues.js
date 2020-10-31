@@ -1,40 +1,64 @@
 module.exports = {
 	rules: {
+		// enforce line breaks after opening and before closing array brackets
+		//  [prettier cover]
+		'array-bracket-newline': 0,
 		// enforce spacing inside array brackets
+		//  [prettier cover]
 		'array-bracket-spacing': 0,
+		// enforce line breaks between array elements
+		'array-element-newline': 0,
 		// disallow or enforce spaces inside of single line blocks
+		//  [prettier cover]
 		'block-spacing': 0,
 		// enforce one true brace style
+		//  [prettier cover]
 		'brace-style': [2, '1tbs', { allowSingleLine: true }],
 		// require camel case names
 		camelcase: 2,
+		// enforce or disallow capitalization of the first letter of a comment
 		'capitalized-comments': 0,
 		// disallow trailing commas in object literals
+		//  [prettier cover]
 		'comma-dangle': 0,
 		// enforce spacing before and after comma
+		//  [prettier cover]
 		'comma-spacing': 0,
 		// enforce one true comma style
+		//  [prettier cover]
 		'comma-style': 0,
 		// require or disallow padding inside computed properties
+		//  [prettier cover]
 		'computed-property-spacing': 0,
 		// enforces consistent naming when capturing the current execution context
 		'consistent-this': 0,
 		// enforce newline at the end of file, with no multiple empty lines
+		//  [editor cover]
 		'eol-last': 0,
+		//  [prettier cover]
+		'func-call-spacing': 0,
+		'func-name-matching': 0,
 		// require function expressions to have a name
+		//  [prettier cover]
 		'func-names': 0,
 		// enforces use of function declarations or expressions
 		'func-style': 0,
+		'function-call-argument-newline': 0,
+		'function-paren-newline': 0,
+		'id-denylist': 0,
 		// this option enforces minimum and maximum identifier lengths (variable names, property names etc.)
 		'id-length': 0,
 		// require identifiers to match the provided regular expression
 		'id-match': 0,
+		'implicit-arrow-linebreak': 0,
 		// this option sets a specific tab width for your code
 		indent: [2, 2],
 		// specify whether double or single quotes should be used in JSX attributes
+		// prettier-ignore
 		'jsx-quotes': 0,
 		// enforces spacing between keys and values in object literal properties
-		'key-spacing': [2, { beforeColon: false, afterColon: true }],
+		'key-spacing': 0,
+		// 'key-spacing': [2, { beforeColon: false, afterColon: true }],
 		// disallow mixed "LF" and "CRLF" as linebreaks
 		'linebreak-style': 0,
 		// enforces empty lines around comments
