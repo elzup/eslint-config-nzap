@@ -1,45 +1,43 @@
 module.exports = {
 	rules: {
+		// stylistic-issues rules give priority to prettier
+
 		// enforce line breaks after opening and before closing array brackets
-		//  [prettier cover]
 		'array-bracket-newline': 0,
 		// enforce spacing inside array brackets
-		//  [prettier cover]
 		'array-bracket-spacing': 0,
 		// enforce line breaks between array elements
 		'array-element-newline': 0,
 		// disallow or enforce spaces inside of single line blocks
-		//  [prettier cover]
 		'block-spacing': 0,
 		// enforce one true brace style
-		//  [prettier cover]
 		'brace-style': [2, '1tbs', { allowSingleLine: true }],
 		// require camel case names
 		camelcase: 2,
 		// enforce or disallow capitalization of the first letter of a comment
 		'capitalized-comments': 0,
 		// disallow trailing commas in object literals
-		//  [prettier cover]
 		'comma-dangle': 0,
 		// enforce spacing before and after comma
-		//  [prettier cover]
 		'comma-spacing': 0,
 		// enforce one true comma style
-		//  [prettier cover]
 		'comma-style': 0,
 		// require or disallow padding inside computed properties
-		//  [prettier cover]
 		'computed-property-spacing': 0,
 		// enforces consistent naming when capturing the current execution context
 		'consistent-this': 0,
-		// enforce newline at the end of file, with no multiple empty lines
-		//  [editor cover]
+		/*
+		 * enforce newline at the end of file, with no multiple empty lines
+		 *  [editor cover]
+		 */
 		'eol-last': 0,
 		//  [prettier cover]
 		'func-call-spacing': 0,
 		'func-name-matching': 0,
-		// require function expressions to have a name
-		//  [prettier cover]
+		/*
+		 * require function expressions to have a name
+		 *  [prettier cover]
+		 */
 		'func-names': 0,
 		// enforces use of function declarations or expressions
 		'func-style': 0,
@@ -78,12 +76,16 @@ module.exports = {
 				ignorePattern: '^\\s*var\\s.+=\\s*require\\s*\\(',
 			},
 		],
+		'max-lines': 0,
+		'max-lines-per-function': 0,
 		// specify the maximum depth callbacks can be nested
 		'max-nested-callbacks': 0,
-		// limits the number of parameters that can be used in the function declaration.
 		'max-params': 0,
-		// specify the maximum number of statement allowed in a function
 		'max-statements': 0,
+		'max-statements-per-line': 0,
+
+		'multiline-comment-style': 0,
+		'multiline-ternary': [2, 2],
 		// require a capital letter for constructors
 		'new-cap': 2,
 		// disallow the omission of parentheses when invoking a constructor with no arguments

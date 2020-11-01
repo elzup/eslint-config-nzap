@@ -18,7 +18,7 @@ module.exports = {
 		'./import.js',
 		'prettier',
 	],
-	plugins: ['prettier'],
+	// plugins: ['prettier'],
 	rules: {
 		strict: 0,
 	},

@@ -140,16 +140,142 @@ if (true) {
 const foo = { "bar": "This is a bar.", "baz": { "qux": "This is a qux" }, "difficult": "to read" };
 
 // OK 'max-lines'
+// prettier-ignore
+var a,
+    b,
+		c;
+
 // OK 'max-lines-per-function'
+function mlpFunc() {
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+}
+
 // OK 'max-nested-callbacks'
+{
+	const f = func
+
+	f(() =>
+		f(() =>
+			f(() =>
+				f(() =>
+					f(() => f(() => f(() => f(() => f(() => f(() => f(() => 0)))))))
+				)
+			)
+		)
+	)
+}
+
 // OK 'max-params'
+const mParams = (bar, baz, qux, qxx) => {}
+
 // OK 'max-statements'
+function mStatements() {
+	const v1 = 0
+	const v2 = 0
+	const v3 = 0
+	const v4 = 0
+	const v5 = 0
+	const v6 = 0
+	const v7 = 0
+	const v8 = 0
+	const v9 = 0
+	const v10 = 0
+	const v11 = 0
+}
+
 // OK 'max-statements-per-line'
+// prettier-ignore
+if (v) bar = 1
+
 // OK 'multiline-comment-style'
+// this line
+// calls foo()
+/* this line
+calls foo() */
+
 // OK 'multiline-ternary'
-// OK 'new-cap'
+v > 10 ? 0 : 1
+
+// NG 'new-cap'
+// const nc = new nCap()
+
 // OK 'new-parens'
+// prettier-ignore
+const np1 = new Item
+// prettier-ignore
+const np2 = new (Item);
+
 // OK 'newline-per-chained-call'
+const npcc = {
+	chain() {
+		return {
+			map() {
+				return {
+					filter() {
+						return {
+							value() {},
+						}
+					},
+				}
+			},
+		}
+	},
+}
+
+// prettier-ignore
+npcc.chain({}).map(foo).filter(bar)
+	.value()
+
 // OK 'no-array-constructor'
 // OK 'no-bitwise'
 // OK 'no-continue'
