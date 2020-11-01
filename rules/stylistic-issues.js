@@ -54,15 +54,17 @@ module.exports = {
 		// this option sets a specific tab width for your code
 		indent: [2, 2],
 		// specify whether double or single quotes should be used in JSX attributes
-		// prettier-ignore
 		'jsx-quotes': 0,
 		// enforces spacing between keys and values in object literal properties
 		'key-spacing': 0,
 		// 'key-spacing': [2, { beforeColon: false, afterColon: true }],
+		'keyword-spacing': 0,
 		// disallow mixed "LF" and "CRLF" as linebreaks
 		'linebreak-style': 0,
+		'line-comment-position': 0,
 		// enforces empty lines around comments
 		'lines-around-comment': 0,
+		'lines-between-class-members': 0,
 		// specify the maximum depth that blocks can be nested
 		'max-depth': 0,
 		// specify the maximum length of a line in your program

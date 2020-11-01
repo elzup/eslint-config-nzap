@@ -100,12 +100,45 @@ const jQuotes = () => <a b="c" />
 const kSpacing = { foo : 42 }
 
 // OK 'keyword-spacing'
+// prettier-ignore
+if (v) {
+}else if (v + 1) {
+}
+
 // OK 'line-comment-position'
+1 + 1 // invalid comment
+
 // OK 'linebreak-style'
 // OK 'lines-around-comment'
+const lbStyle = 'long'
+/* what a great and wonderful day */
+const lbStyle2 = 'great'
+
 // OK 'lines-between-class-members'
+class LbcMembers {
+	foo() {}
+	bar() {}
+}
+
 // OK 'max-depth'
+if (true) {
+	if (true) {
+		if (true) {
+			if (true) {
+				if (true) {
+					if (true) {
+						func()
+					}
+				}
+			}
+		}
+	}
+}
+
 // OK 'max-len'
+// prettier-ignore
+const foo = { "bar": "This is a bar.", "baz": { "qux": "This is a qux" }, "difficult": "to read" };
+
 // OK 'max-lines'
 // OK 'max-lines-per-function'
 // OK 'max-nested-callbacks'
