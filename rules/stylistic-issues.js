@@ -26,18 +26,14 @@ module.exports = {
 		'computed-property-spacing': 0,
 		// enforces consistent naming when capturing the current execution context
 		'consistent-this': 0,
-		/*
-		 * enforce newline at the end of file, with no multiple empty lines
-		 *  [editor cover]
-		 */
+		// enforce newline at the end of file, with no multiple empty lines
+		//  [editor cover]
 		'eol-last': 0,
 		//  [prettier cover]
 		'func-call-spacing': 0,
 		'func-name-matching': 0,
-		/*
-		 * require function expressions to have a name
-		 *  [prettier cover]
-		 */
+		// require function expressions to have a name
+		//  [prettier cover]
 		'func-names': 0,
 		// enforces use of function declarations or expressions
 		'func-style': 0,
@@ -85,7 +81,7 @@ module.exports = {
 		'max-statements-per-line': 0,
 
 		'multiline-comment-style': 0,
-		'multiline-ternary': [2, 2],
+		'multiline-ternary': 0,
 		// require a capital letter for constructors
 		'new-cap': 2,
 		// disallow the omission of parentheses when invoking a constructor with no arguments
@@ -93,7 +89,7 @@ module.exports = {
 		// allow/disallow an empty newline after var statement
 		'newline-after-var': 2,
 		// disallow use of the Array constructor
-		'no-array-constructor': 2,
+		'no-array-constructor': 0,
 		// disallow use of bitwise operators
 		'no-bitwise': 0,
 		// disallow use of the continue statement
@@ -103,7 +99,9 @@ module.exports = {
 		// disallow if as the only statement in an else block
 		'no-lonely-if': 0,
 		// disallow mixed spaces and tabs for indentation
+		'no-mixed-operators': 0,
 		'no-mixed-spaces-and-tabs': 2,
+		'no-multi-assign': 0,
 		// disallow multiple empty lines
 		'no-multiple-empty-lines': 0,
 		// disallow negated conditions
@@ -116,8 +114,6 @@ module.exports = {
 		'no-plusplus': 0,
 		// disallow use of certain syntax in code
 		'no-restricted-syntax': 0,
-		// disallow space between function identifier and application
-		'no-spaced-func': 2,
 		// disallow the use of ternary operators
 		'no-ternary': 0,
 		// disallow trailing whitespace at the end of lines
@@ -126,30 +122,34 @@ module.exports = {
 		'no-underscore-dangle': 0,
 		// disallow the use of Boolean literals in conditional expressions
 		'no-unneeded-ternary': 0,
-		// require or disallow padding inside curly braces
-		'object-curly-spacing': [2, 'never'],
+		'no-whitespace-before-property': 0,
+		'nonblock-statement-body-position': 0,
+		'object-curly-newline': 0,
+		'object-curly-spacing': 0,
+		'object-property-newline': 0,
 		// allow just one var statement per function
 		'one-var': 0,
 		// require assignment operator shorthand where possible or prohibit it entirely
+		'one-var-declaration-per-line': 0,
 		'operator-assignment': 0,
 		// enforce operators to be placed before or after line breaks
 		'operator-linebreak': [2, 'after'],
 		// enforce padding within blocks
 		'padded-blocks': 0,
+		'padding-line-between-statements': 0,
+		'prefer-exponentiation-operator': 0,
+		'prefer-object-spread': 0,
 		// require quotes around object literal property names
 		'quote-props': 0,
 		// specify whether double or single quotes should be used
 		quotes: [2, 'single'],
-		// Require JSDoc comment
-		'require-jsdoc': 0,
-		// enforce spacing before and after semicolons
-		'semi-spacing': 0,
 		// require or disallow use of semicolons instead of ASI
 		semi: 2,
+		'semi-spacing': 0,
+		'semi-style': 0,
 		// sort variables within the same declaration block
+		'sort-keys': 0,
 		'sort-vars': 0,
-		// require a space before/after certain keywords
-		'keyword-spacing': 0,
 		// require or disallow space before blocks
 		'space-before-blocks': [2, 'always'],
 		// require or disallow space before function opening parenthesis

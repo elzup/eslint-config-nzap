@@ -137,13 +137,13 @@ if (true) {
 
 // OK 'max-len'
 // prettier-ignore
-const foo = { "bar": "This is a bar.", "baz": { "qux": "This is a qux" }, "difficult": "to read" };
+const mLen = { "bar": "This is a bar.", "baz": { "qux": "This is a qux" }, "difficult": "to read" };
 
 // OK 'max-lines'
 // prettier-ignore
-var a,
-    b,
-		c;
+var mLines1,
+    mLines2,
+		mLines3
 
 // OK 'max-lines-per-function'
 function mlpFunc() {
@@ -235,7 +235,7 @@ function mStatements() {
 
 // OK 'max-statements-per-line'
 // prettier-ignore
-if (v) bar = 1
+if (v) { const mspl = 1 }
 
 // OK 'multiline-comment-style'
 // this line
@@ -253,7 +253,7 @@ v > 10 ? 0 : 1
 // prettier-ignore
 const np1 = new Item
 // prettier-ignore
-const np2 = new (Item);
+const np2 = new (Item)
 
 // OK 'newline-per-chained-call'
 const npcc = {
@@ -271,22 +271,68 @@ const npcc = {
 		}
 	},
 }
+const npcc2 = {
+	chain: () => ({
+		map: () => ({
+			filter: () => ({
+				value() {},
+			}),
+		}),
+	}),
+}
 
 // prettier-ignore
-npcc.chain({}).map(foo).filter(bar)
+npcc.chain({}).map(func).filter(func)
 	.value()
 
 // OK 'no-array-constructor'
+new Array(1, 2)
+
 // OK 'no-bitwise'
+0 | ((1 & 1) ^ 1)
+
 // OK 'no-continue'
+while (false) {
+	if (v) continue
+}
+
 // OK 'no-inline-comments'
+func() // hoge
+
 // OK 'no-lonely-if'
+if (v) {
+} else {
+	if (v) {
+	}
+}
+
 // OK 'no-mixed-operators'
-// OK 'no-mixed-spaces-and-tabs'
+const nmOperators = (0 && 1) || 2 || 3 === 0
+
+// NG 'no-mixed-spaces-and-tabs'
+
 // OK 'no-multi-assign'
+var nma1
+// prettier-ignore
+var nma2 = nma1 = 5
+
 // OK 'no-multiple-empty-lines'
+// prettier-ignore
+{
+
+
+
+}
+
 // OK 'no-negated-condition'
+if (!v) {
+} else {
+}
+
 // OK 'no-nested-ternary'
+var nnt1, nnt2, nnt3
+const nnt = nnt1 ? nnt2 : nnt3 === nnt1 ? nnt2 : nnt3
+
 // OK 'no-new-object'
 // OK 'no-plusplus'
 // OK 'no-restricted-syntax'
@@ -303,25 +349,22 @@ npcc.chain({}).map(foo).filter(bar)
 // OK 'one-var'
 // OK 'one-var-declaration-per-line'
 // OK 'operator-assignment'
-// OK 'operator-linebreak'
+// NG 'operator-linebreak'
 // OK 'padded-blocks'
 // OK 'padding-line-between-statements'
 // OK 'prefer-exponentiation-operator'
 // OK 'prefer-object-spread'
 // OK 'quote-props'
 // OK 'quotes'
-// OK 'semi'
+// NG 'semi'
 // OK 'semi-spacing'
 // OK 'semi-style'
 // OK 'sort-keys'
 // OK 'sort-vars'
-// OK 'space-before-blocks'
-// OK 'space-before-function-paren'
-// OK 'space-in-parens'
-// OK 'space-infix-ops'
-// OK 'space-unary-ops'
+// NG 'space-before-blocks'
+// NG 'space-before-function-paren'
+// NG 'space-in-parens'
+// NG 'space-infix-ops'
+// NG 'space-unary-ops'
 // OK 'spaced-comment'
-// OK 'switch-colon-spacing'
-// OK 'template-tag-spacing'
-// OK 'unicode-bom'
 // OK 'wrap-regex'
