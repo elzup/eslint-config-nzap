@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable no-var */
 /* eslint-disable no-unused-expressions */
 
@@ -65,14 +66,12 @@ const nDebugger = () => {
 }
 
 // NG 'no-dupe-args'
-// eslint-disable-next-line no-redeclare, no-dupe-args
-const ndArgs = (_a, _b, _a) => {}
+// const ndArgs = (_a, _b, _a) => {}
 
 // NG 'no-dupe-else-if'
 if (v === 0) {
 } else if (v === 1) {
-  // eslint-disable-next-line no-dupe-else-if
-} else if (v === 1) {
+  // } else if (v === 1) {
 }
 
 // NG 'no-dupe-keys'
@@ -86,9 +85,8 @@ var ndKeys = {
 switch (v) {
   case 2:
     break
-  // eslint-disable-next-line no-duplicate-case
-  case 1: // duplicate test expression
-    break
+  // case 2: // duplicate test expression
+  // break
 }
 
 // OK 'no-empty'
@@ -214,10 +212,9 @@ if (!0 in v) {
 ;/^(?:(a)|\1b)$/ // reference to (a) into another alternative
 
 // OK require-atomic-updates
-let rau
+let rau = 1
 
 async function raUpdates() {
-  rau = (await p) + rau
   let tmp = await p
 
   rau += tmp
@@ -227,10 +224,8 @@ async function raUpdates() {
 }
 
 // NG use-isnan
-// eslint-disable-next-line use-isnan
-if (v === NaN) {
-}
+// if (v === NaN) {
+// }
 
 // NG valid-typeof
-// eslint-disable-next-line valid-typeof
-typeof v === 'strnig'
+// typeof v === 'strnig'

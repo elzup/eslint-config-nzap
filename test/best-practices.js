@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable no-var */
 /* eslint-disable no-unused-expressions */
 
@@ -41,7 +42,7 @@ class CmuThis {
 // OK 'complexity'
 function complexity(x) {
   if (true) return x
-  else if (false) return x + 1
+  else if (false) return 2
   else return 4 // 3rd path
 }
 

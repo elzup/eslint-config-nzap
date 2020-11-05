@@ -85,7 +85,7 @@ module.exports = {
     '@typescript-eslint/member-ordering': 'error',
     '@typescript-eslint/no-array-constructor': 'error',
     '@typescript-eslint/no-empty-interface': 'error',
-    '@typescript-eslint/no-extraneous-class': 'error',
+    '@typescript-eslint/no-extraneous-class': 'off',
 
     // TODO: ignoreParametersについては考える余地がある
     '@typescript-eslint/no-inferrable-types': 'error',
@@ -95,10 +95,10 @@ module.exports = {
     // 混乱の元
     '@typescript-eslint/no-parameter-properties': 'error',
     // 一旦 cosnt {props, state} = this; も無効
-    '@typescript-eslint/no-this-alias': 'error',
+    '@typescript-eslint/no-this-alias': 'off',
     '@typescript-eslint/no-unnecessary-type-assertion': 'error',
     '@typescript-eslint/no-use-before-define': 'off',
-    '@typescript-eslint/no-useless-constructor': 'error',
+    '@typescript-eslint/no-useless-constructor': 'off',
     '@typescript-eslint/no-type-alias': 'off',
 
     'no-unused-vars': 'off',
@@ -143,7 +143,7 @@ module.exports = {
     '@typescript-eslint/no-magic-numbers': 'off',
     // ドキュメントに記載なし
     '@typescript-eslint/indent-new-do-not-use': 'off',
-    '@typescript-eslint/prefer-regexp-exec': 'error',
+    '@typescript-eslint/prefer-regexp-exec': 'off',
     '@typescript-eslint/prefer-readonly': 'error',
     '@typescript-eslint/triple-slash-reference': ['error', { path: 'never' }],
     '@typescript-eslint/no-explicit-any': [
@@ -153,8 +153,7 @@ module.exports = {
         ignoreRestArgs: true,
       },
     ],
-    'no-empty-function': 'off',
-    '@typescript-eslint/no-empty-function': 'error',
+    '@typescript-eslint/no-empty-function': 'off',
     // Disabled because of https://github.com/typescript-eslint/typescript-eslint/issues/647
     '@typescript-eslint/no-floating-promises': 'off',
     // 様子見

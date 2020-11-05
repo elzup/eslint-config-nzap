@@ -87,8 +87,6 @@ module.exports = {
     'import/no-default-export': 0, // export defaultは使う
     'import/no-named-export': 0, // export constは使う
     'import/group-exports': 0, // eslint4.18.1だと壊れる
-    'import/no-useless-path-segments': 0, // 有効にするとエラーが起きる。いずれ有効にする
-    'import/no-self-import': 0, // 有効にするとエラーが起きる。いずれ有効にする
     'import/no-cycle': 0, // flowを使っているなら必要性が低い。また計算コストがかかる
     'import/dynamic-import-chunkname': 0, // prettier案件
     // 辛すぎて生産性が落ちる。無効

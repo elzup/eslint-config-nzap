@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable no-var */
 /* eslint-disable no-unused-expressions */
 
@@ -109,7 +110,7 @@ function prParams() {
 func.apply(null, [1, 2])
 
 // OK 'prefer-template'
-const pTemplate = 'Time: ' + 12 * 60 * 60 * 1000
+const pTemplate = 'Time: ' + String(v)
 
 // OK 'require-yield'
 function* rYield() {

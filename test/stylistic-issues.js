@@ -1,10 +1,13 @@
 /* eslint-disable no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/naming-convention */
 /* eslint-disable no-var */
 /* eslint-disable no-unused-expressions */
+import React from 'react'
 
 const func = () => {}
 const obj = {}
-var v = false
+var v = 0
 
 class Item {}
 
@@ -81,7 +84,7 @@ function fStyle() {}
 func('one', 'two', 'three')
 
 // OK 'function-paren-newline'
-const fpNewline = (a, b) => a + b
+const fpNewline = (a, b) => 0
 
 // OK 'id-denylist'
 // OK 'id-length'
@@ -287,7 +290,7 @@ npcc.chain({}).map(func).filter(func)
 	.value()
 
 // OK 'no-array-constructor'
-new Array(1, 2)
+[1, 2]
 
 // OK 'no-bitwise'
 0 | ((1 & 1) ^ 1)
@@ -479,4 +482,4 @@ func `Hello world`;
 // OK 'unicode-bom'
 
 // OK 'wrap-regex'
-;/wr/.test('bar')
+'bar'.includes('wr')
