@@ -9,45 +9,45 @@ class Item {}
 
 // OK 'accessor-pairs'
 const aPairs = {
-	set a(value) {
-		this.val = value
-	},
+  set a(value) {
+    this.val = value
+  },
 }
 
 // NG 'array-callback-return'
 const acr1 = []
 // eslint-disable-next-line array-callback-return
 const acr2 = acr1.reduce((memo, item, index) => {
-	memo[item] = index
+  memo[item] = index
 }, {})
 
 // OK 'block-scoped-var'
 function bsVar() {
-	if (true) var build = true
+  if (true) var build = true
 
-	func(build)
+  func(build)
 }
 
 // OK 'class-methods-use-this'
 class CmuThis {
-	foo() {
-		func(
-			'Hello World'
-		) /*error Expected 'this' to be used by class method 'foo'.*/
-	}
+  foo() {
+    func(
+      'Hello World'
+    ) /*error Expected 'this' to be used by class method 'foo'.*/
+  }
 }
 
 // OK 'complexity'
 function complexity(x) {
-	if (true) return x
-	else if (false) return x + 1
-	else return 4 // 3rd path
+  if (true) return x
+  else if (false) return x + 1
+  else return 4 // 3rd path
 }
 
 // NG 'consistent-return'
 // eslint-disable-next-line consistent-return
 function cReturn(condition) {
-	if (condition) return true
+  if (condition) return true
 }
 
 // OK 'curly'
@@ -55,18 +55,18 @@ if (true) func()
 
 // OK 'default-case'
 switch (v) {
-	case 1:
-		/* code */
-		break
+  case 1:
+    /* code */
+    break
 }
 
 // OK 'default-case-last'
 switch (v) {
-	default:
-		break
-	case -1:
-		func()
-		break
+  default:
+    break
+  case -1:
+    func()
+    break
 }
 
 // NG 'default-param-last'
@@ -87,13 +87,13 @@ const eee = 10 == 42
 
 // OK 'grouped-accessor-pairs'
 const gaPairs = {
-	get a() {
-		return this.val
-	},
-	b: 1,
-	set a(value) {
-		this.val = value
-	},
+  get a() {
+    return this.val
+  },
+  b: 1,
+  set a(value) {
+    this.val = value
+  },
 }
 
 // NG 'guard-for-in'
@@ -110,25 +110,25 @@ if (false) alert()
 
 // OK 'no-caller'
 function nCaller(n) {
-	if (n <= 0) return
-	arguments.callee(n - 1)
+  if (n <= 0) return
+  arguments.callee(n - 1)
 }
 
 // NG 'no-case-declarations'
 switch (v) {
-	case 1:
-		// eslint-disable-next-line no-case-declarations
-		let x = 1
+  case 1:
+    // eslint-disable-next-line no-case-declarations
+    let x = 1
 
-		break
+    break
 }
 
 // OK 'no-constructor-return'
 class NcReturn {
-	constructor(a) {
-		this.a = a
-		return a
-	}
+  constructor(a) {
+    this.a = a
+    return a
+  }
 }
 
 // OK 'no-div-regex'
@@ -136,11 +136,11 @@ const reg2 = /[=]foo/
 
 // OK 'no-else-return'
 function neReturn() {
-	if (v) {
-		return 0
-	} else {
-		return 2
-	}
+  if (v) {
+    return 0
+  } else {
+    return 2
+  }
 }
 
 // OK 'no-empty-function'
@@ -164,21 +164,21 @@ Object.defineProperty(Array.prototype, 'times', { value: 999 })
 
 // OK 'no-extra-bind'
 const neBind = (() => {
-	func()
+  func()
 }).bind(null)
 
 // OK 'no-extra-label'
 neLabel: while (v) {
-	break neLabel
+  break neLabel
 }
 
 // NG 'no-fallthrough'
 switch (v) {
-	case 1:
-		func()
-	// eslint-disable-next-line no-fallthrough
-	case 2:
-		func()
+  case 1:
+    func()
+  // eslint-disable-next-line no-fallthrough
+  case 2:
+    func()
 }
 
 // OK 'no-floating-decimal'
@@ -212,17 +212,17 @@ noLabel: if (true) {
 
 // OK 'no-lone-blocks'
 {
-	func()
+  func()
 }
 
 // OK 'no-loop-func'
 for (let i = 10; i; i--) {
-	;(() => i)()
+  ;(() => i)()
 }
 
 // OK 'no-magic-numbers'
 const nmNum = 100,
-	nmNum2 = nmNum + nmNum * 0.25
+  nmNum2 = nmNum + nmNum * 0.25
 
 // OK 'no-multi-spaces'
 // prettier-ignore
@@ -249,8 +249,8 @@ var nnWraps = new String('hello')
 
 // NG 'no-param-reassign'
 function npReassign(bar) {
-	// eslint-disable-next-line no-param-reassign
-	bar++
+  // eslint-disable-next-line no-param-reassign
+  bar++
 }
 
 // OK 'no-proto'
@@ -262,8 +262,8 @@ func(nProto.__proto__)
 var nRedec = 0
 
 {
-	// eslint-disable-next-line no-redeclare
-	var nRedec = 0
+  // eslint-disable-next-line no-redeclare
+  var nRedec = 0
 }
 
 // OK 'no-restricted-properties'
@@ -277,7 +277,7 @@ const nrAssign = () => (nra = 1)
 
 // OK 'no-return-await'
 async function nrAwait() {
-	return await nrAwait()
+  return await nrAwait()
 }
 
 // OK 'no-script-url'
@@ -313,7 +313,7 @@ func.call(undefined, 1, 2, 3)
 // OK 'no-useless-catch'
 try {
 } catch (e) {
-	throw e
+  throw e
 }
 
 // OK 'no-useless-concat'
@@ -324,7 +324,7 @@ try {
 
 // OK 'no-useless-return'
 function nuReturn() {
-	return
+  return
 }
 
 // OK 'no-void'
@@ -354,7 +354,7 @@ parseInt('077')
 
 // OK 'require-await'
 async function requireAwait() {
-	func()
+  func()
 }
 
 // OK 'require-unicode-regexp'
@@ -362,15 +362,15 @@ const ruRexep = /aaa/
 
 // OK 'vars-on-top'
 function varsOnTop() {
-	var first
+  var first
 
-	first = true
-	var second
+  first = true
+  var second
 }
 
 // OK 'wrap-iife'
 const wIife = (function () {
-	return { y: 1 }
+  return { y: 1 }
 })()
 
 // OK 'yoda'

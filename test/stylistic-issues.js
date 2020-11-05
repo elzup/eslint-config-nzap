@@ -116,23 +116,23 @@ const lbStyle2 = 'great'
 
 // OK 'lines-between-class-members'
 class LbcMembers {
-	foo() {}
-	bar() {}
+  foo() {}
+  bar() {}
 }
 
 // OK 'max-depth'
 if (true) {
-	if (true) {
-		if (true) {
-			if (true) {
-				if (true) {
-					if (true) {
-						func()
-					}
-				}
-			}
-		}
-	}
+  if (true) {
+    if (true) {
+      if (true) {
+        if (true) {
+          if (true) {
+            func()
+          }
+        }
+      }
+    }
+  }
 }
 
 // OK 'max-len'
@@ -147,72 +147,72 @@ var mLines1,
 
 // OK 'max-lines-per-function'
 function mlpFunc() {
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
 }
 
 // OK 'max-nested-callbacks'
 {
-	const f = func
+  const f = func
 
-	f(() =>
-		f(() =>
-			f(() =>
-				f(() =>
-					f(() => f(() => f(() => f(() => f(() => f(() => f(() => 0)))))))
-				)
-			)
-		)
-	)
+  f(() =>
+    f(() =>
+      f(() =>
+        f(() =>
+          f(() => f(() => f(() => f(() => f(() => f(() => f(() => 0)))))))
+        )
+      )
+    )
+  )
 }
 
 // OK 'max-params'
@@ -220,17 +220,17 @@ const mParams = (bar, baz, qux, qxx) => {}
 
 // OK 'max-statements'
 function mStatements() {
-	const v1 = 0
-	const v2 = 0
-	const v3 = 0
-	const v4 = 0
-	const v5 = 0
-	const v6 = 0
-	const v7 = 0
-	const v8 = 0
-	const v9 = 0
-	const v10 = 0
-	const v11 = 0
+  const v1 = 0
+  const v2 = 0
+  const v3 = 0
+  const v4 = 0
+  const v5 = 0
+  const v6 = 0
+  const v7 = 0
+  const v8 = 0
+  const v9 = 0
+  const v10 = 0
+  const v11 = 0
 }
 
 // OK 'max-statements-per-line'
@@ -257,28 +257,28 @@ const np2 = new (Item)
 
 // OK 'newline-per-chained-call'
 const npcc = {
-	chain() {
-		return {
-			map() {
-				return {
-					filter() {
-						return {
-							value() {},
-						}
-					},
-				}
-			},
-		}
-	},
+  chain() {
+    return {
+      map() {
+        return {
+          filter() {
+            return {
+              value() {},
+            }
+          },
+        }
+      },
+    }
+  },
 }
 const npcc2 = {
-	chain: () => ({
-		map: () => ({
-			filter: () => ({
-				value() {},
-			}),
-		}),
-	}),
+  chain: () => ({
+    map: () => ({
+      filter: () => ({
+        value() {},
+      }),
+    }),
+  }),
 }
 
 // prettier-ignore
@@ -293,7 +293,7 @@ new Array(1, 2)
 
 // OK 'no-continue'
 while (false) {
-	if (v) continue
+  if (v) continue
 }
 
 // OK 'no-inline-comments'
@@ -302,8 +302,8 @@ func() // hoge
 // OK 'no-lonely-if'
 if (v) {
 } else {
-	if (v) {
-	}
+  if (v) {
+  }
 }
 
 // OK 'no-mixed-operators'
@@ -378,8 +378,8 @@ const opNewline = { foo: 'foo', bar: 'bar', baz: 'baz' }
 
 // OK 'one-var'
 function ov() {
-	var bar
-	var baz
+  var bar
+  var baz
 }
 
 // OK 'one-var-declaration-per-line'
@@ -409,8 +409,8 @@ if (v) {
 
 // OK 'padding-line-between-statements'
 function plbStatements() {
-	func()
-	return
+  func()
+  return
 }
 
 // OK 'prefer-exponentiation-operator'
@@ -421,8 +421,8 @@ Object.assign({}, obj)
 
 // OK 'quote-props'
 const qProps = {
-	foo: 'bar',
-	baz: 42,
+  foo: 'bar',
+  baz: 42,
 }
 
 // OK 'quotes'

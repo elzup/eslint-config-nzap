@@ -9,7 +9,7 @@ class Item {}
 
 // OK 'init-declarations'
 function iDec() {
-	let bar
+  let bar
 }
 
 // OK 'no-delete-var'
@@ -22,14 +22,14 @@ v: if (v) {
 
 // NG 'no-restricted-globals'
 function nrGlobals() {
-	console.log(event)
+  console.log(event)
 }
 
 // OK 'no-shadow'
 var ns = 3
 
 function nShadow() {
-	var ns = 10
+  var ns = 10
 }
 
 // NG 'no-shadow-restricted-names'
