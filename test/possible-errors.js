@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+/* eslint-disable no-var */
 /* eslint-disable no-unused-expressions */
 
 import * as m from './module'
@@ -12,29 +13,29 @@ let v = false
 // NG 'for-direction'
 // eslint-disable-next-line for-direction
 for (let i = 10; i >= 0; i++) {
-	func()
+  func()
 }
 
 // OK 'getter-return'
 const gReturn = {
-	get name() {
-		'nicholas'
-	},
+  get name() {
+    'nicholas'
+  },
 }
 
 // NG 'no-async-promise-executor
 // eslint-disable-next-line no-async-promise-executor
 const napExector = new Promise(async () => {
-	func()
+  func()
 })
 
 // OK 'no-await-in-loop'
 async function naiLoop(things) {
-	const results = []
+  const results = []
 
-	for (const thing of things) {
-		results.push(await p(thing))
-	}
+  for (const thing of things) {
+    results.push(await p(thing))
+  }
 }
 
 // OK 'no-compare-neg-zero'
@@ -51,7 +52,7 @@ console.log()
 
 // OK 'no-constant-condition'
 if (false) {
-	func()
+  func()
 }
 
 // NG 'no-control-regex'
@@ -60,7 +61,7 @@ var ncRegex = /\x1f/
 
 // OK 'no-debugger'
 const nDebugger = () => {
-	debugger
+  debugger
 }
 
 // NG 'no-dupe-args'
@@ -70,24 +71,24 @@ const ndArgs = (_a, _b, _a) => {}
 // NG 'no-dupe-else-if'
 if (v === 0) {
 } else if (v === 1) {
-	// eslint-disable-next-line no-dupe-else-if
+  // eslint-disable-next-line no-dupe-else-if
 } else if (v === 1) {
 }
 
 // NG 'no-dupe-keys'
 var ndKeys = {
-	bar: 'baz',
-	// eslint-disable-next-line no-dupe-keys
-	bar: 'qux',
+  bar: 'baz',
+  // eslint-disable-next-line no-dupe-keys
+  bar: 'qux',
 }
 
 // NG 'no-duplicate-case'
 switch (v) {
-	case 2:
-		break
-	// eslint-disable-next-line no-duplicate-case
-	case 1: // duplicate test expression
-		break
+  case 2:
+    break
+  // eslint-disable-next-line no-duplicate-case
+  case 1: // duplicate test expression
+    break
 }
 
 // OK 'no-empty'
@@ -100,7 +101,7 @@ const nEmpty = () => {}
 // OK 'no-ex-assign'
 try {
 } catch (e) {
-	e = 10
+  e = 10
 }
 
 // OK 'no-extra-boolean-cast'
@@ -125,10 +126,10 @@ nfAssign = func
 
 // NG no-inner-declarations
 function niDeclera() {
-	if (true) {
-		// eslint-disable-next-line no-inner-declarations
-		function niDeclera2() {}
-	}
+  if (true) {
+    // eslint-disable-next-line no-inner-declarations
+    function niDeclera2() {}
+  }
 }
 
 // NG no-invalid-regexp
@@ -150,7 +151,7 @@ const noCalls = new Math()
 
 // OK no-promise-executor-return
 new Promise(() => {
-	return 1
+  return 1
 })
 
 // OK no-prototype-builtins
@@ -161,10 +162,10 @@ const neSpaces = /l   r/
 
 // OK no-setter-return
 const nsReturn = {
-	set a(value) {
-		this.val = value
-		return value
-	},
+  set a(value) {
+    this.val = value
+    return value
+  },
 }
 
 // NG no-sparse-arrays
@@ -181,27 +182,27 @@ const nuMultiline = func
 
 // OK no-unreachable
 function nUnreachable() {
-	v = 1
-	return v
-	v = 3 // this will never execute
+  v = 1
+  return v
+  v = 3 // this will never execute
 }
 
 // OK no-unreachable-loop
 while (v) {
-	func(v)
-	v = v.parent
-	break
+  func(v)
+  v = v.parent
+  break
 }
 
 // OK no-unsafe-finally
 function nuFinally() {
-	try {
-		return 1
-	} catch (_e) {
-		return 2
-	} finally {
-		return 3
-	}
+  try {
+    return 1
+  } catch (_e) {
+    return 2
+  } finally {
+    return 3
+  }
 }
 
 // NG no-unsafe-negation
@@ -216,13 +217,13 @@ if (!0 in v) {
 let rau
 
 async function raUpdates() {
-	rau = (await p) + rau
-	let tmp = await p
+  rau = (await p) + rau
+  let tmp = await p
 
-	rau += tmp
-	let _localVariable = 0
+  rau += tmp
+  let _localVariable = 0
 
-	_localVariable += await p
+  _localVariable += await p
 }
 
 // NG use-isnan

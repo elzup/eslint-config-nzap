@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+/* eslint-disable no-var */
 /* eslint-disable no-unused-expressions */
 
 const func = () => {}
