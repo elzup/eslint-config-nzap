@@ -52,7 +52,7 @@ const cSpacing = [1 , 2]
 // prettier-ignore
 const cStyle = 1
 ,
-bar = 2
+cStyle2 = 2
 
 // OK 'computed-property-spacing'
 // prettier-ignore
@@ -334,37 +334,148 @@ var nnt1, nnt2, nnt3
 const nnt = nnt1 ? nnt2 : nnt3 === nnt1 ? nnt2 : nnt3
 
 // OK 'no-new-object'
+new Object()
+
 // OK 'no-plusplus'
+let npp = 0
+
+npp++
+
 // OK 'no-restricted-syntax'
+
 // OK 'no-tabs'
+// prettier-ignore
+var nTabs	 = 2
+
 // OK 'no-ternary'
-// OK 'no-trailing-spaces'
+const nTernary = 0 ? 1 : 2
+
+// NG 'no-trailing-spaces'
+
 // OK 'no-underscore-dangle'
+const __nud = 0
+
 // OK 'no-unneeded-ternary'
+const nuTernary = 1 ? true : false
+
 // OK 'no-whitespace-before-property'
+// prettier-ignore
+obj. bar .baz
+
 // OK 'nonblock-statement-body-position'
+// prettier-ignore
+if (v)
+  func()
+
 // OK 'object-curly-newline'
+const ocNewline = {}
+
 // OK 'object-curly-spacing'
+const ocSpacing = { oc: true }
+
 // OK 'object-property-newline'
+const opNewline = { foo: 'foo', bar: 'bar', baz: 'baz' }
+
 // OK 'one-var'
+function ov() {
+	var bar
+	var baz
+}
+
 // OK 'one-var-declaration-per-line'
+// prettier-ignore
+var ovdp, ovdp2, ovdp3 = 0
+
 // OK 'operator-assignment'
+var oa = 1
+
+oa = oa + 1
+
 // NG 'operator-linebreak'
+let ol
+
+// prettier-ignore
+ol = 1
++
+2
+
 // OK 'padded-blocks'
+// prettier-ignore
+if (v) {
+
+	func()
+
+}
+
 // OK 'padding-line-between-statements'
+function plbStatements() {
+	func()
+	return
+}
+
 // OK 'prefer-exponentiation-operator'
+const peOperator = Math.pow(2, 8)
+
 // OK 'prefer-object-spread'
+Object.assign({}, obj)
+
 // OK 'quote-props'
+const qProps = {
+	foo: 'bar',
+	baz: 42,
+}
+
 // OK 'quotes'
+const quotes = 'q'
+
 // NG 'semi'
+const semi = 'ESLint'
+
 // OK 'semi-spacing'
+
 // OK 'semi-style'
+;[1, 2, 3]
+
 // OK 'sort-keys'
+const sKeys = { b: 2, c: 3, a: 1 }
+
 // OK 'sort-vars'
-// NG 'space-before-blocks'
-// NG 'space-before-function-paren'
-// NG 'space-in-parens'
-// NG 'space-infix-ops'
-// NG 'space-unary-ops'
+var svs2, svs3, svs1
+
+// OK 'space-before-blocks'
+// prettier-ignore
+if (v){
+}
+
+// OK 'space-before-function-paren'
+function sbfParen() {}
+
+// OK 'space-in-parens'
+// prettier-ignore
+func( 'bar');
+
+// OK 'space-infix-ops'
+// prettier-ignore
+1+ 2
+
+// OK 'space-unary-ops'
+// prettier-ignore
+void{foo: 0}
+
 // OK 'spaced-comment'
+/*s comment*/
+
+// OK 'switch-colon-spacing'
+// prettier-ignore
+switch (v) {
+	case 0 :break
+}
+
+// OK 'template-tag-spacing'
+// prettier-ignore
+func `Hello world`;
+
+// OK 'unicode-bom'
+
 // OK 'wrap-regex'
+;/wr/.test('bar')
