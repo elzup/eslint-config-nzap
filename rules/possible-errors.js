@@ -41,7 +41,7 @@ module.exports = {
     'no-unexpected-multiline': 0, // [prettier]
     // エディタハイライトでわかる
     'no-unreachable': 0,
-    // 'no-unreachable-loop': 0,
+    'no-unreachable-loop': 0,
     'no-unsafe-finally': 0,
     'no-unsafe-negation': 2,
     'no-useless-backreference': 0,

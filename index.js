@@ -21,5 +21,6 @@ module.exports = {
   plugins: ['prettier'],
   rules: {
     strict: 0,
+    'prettier/prettier': 1,
   },
 }

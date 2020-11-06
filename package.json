@@ -20,7 +20,6 @@
 		"fmt": "prettier --write '*.{js,json,md}'",
 		"lint": "eslint -c ./index.js index.js",
 		"find-new-rules": "npm-run-all --parallel find-new-rules:*",
-		"find-new-rules:jest": "eslint-find-rules --unused -v ./test/jest.js",
 		"find-new-rules:ts": "eslint-find-rules --unused -v ./test/with_typescript.js",
 		"find-new-rules:main": "eslint-find-rules --unused -v ./index.js",
 		"eslint-check": "eslint --print-config .eslintrc | eslint-config-prettier-check",
@@ -28,24 +27,24 @@
 		"test:tsx": "eslint -c ./test/with_tsx.js ./test/test.tsx"
 	},
 	"dependencies": {
-		"@typescript-eslint/eslint-plugin": "^3.9.0",
-		"@typescript-eslint/parser": "^3.9.0",
+		"@typescript-eslint/eslint-plugin": "^4.6.1",
+		"@typescript-eslint/parser": "^4.6.1",
 		"babel-eslint": "^10.1.0",
-		"eslint-config-prettier": "^6.11.0",
-		"eslint-plugin-import": "^2.22.0",
-		"eslint-plugin-jest": "^23.20.0",
+		"eslint-config-prettier": "^6.15.0",
+		"eslint-plugin-import": "^2.22.1",
+		"eslint-plugin-jest": "^24.1.0",
 		"eslint-plugin-prettier": "^3.1.4",
-		"eslint-plugin-react": "^7.20.6",
-		"eslint-plugin-react-hooks": "^4.0.8"
+		"eslint-plugin-react": "^7.21.5",
+		"eslint-plugin-react-hooks": "^4.2.0"
 	},
 	"devDependencies": {
-		"@types/react": "16.9.46",
-		"eslint": "7.6.0",
-		"eslint-find-rules": "3.6.0",
+		"@types/react": "16.9.55",
+		"eslint": "7.12.1",
+		"eslint-find-rules": "3.6.1",
 		"npm-run-all": "4.1.5",
-		"prettier": "2.0.5",
-		"react": "16.13.1",
-		"typescript": "3.9.7"
+		"prettier": "2.1.2",
+		"react": "17.0.1",
+		"typescript": "4.0.5"
 	},
 	"peerDependencies": {
 		"eslint": ">=6.6.0",
