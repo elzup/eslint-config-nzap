@@ -19,9 +19,9 @@ const aPairs = {
 // NG 'array-callback-return'
 const acr1 = []
 // eslint-disable-next-line array-callback-return
-const acr2 = acr1.reduce((memo, item, index) => {
-  memo[item] = index
-}, {})
+// const acr2 = acr1.reduce((memo, item, index) => {
+//   memo[item] = index
+// }, {})
 
 // OK 'block-scoped-var'
 function bsVar() {

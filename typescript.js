@@ -3,13 +3,14 @@ module.exports = {
   extends: ['prettier/@typescript-eslint'],
   plugins: ['@typescript-eslint'],
   parserOptions: {
-    // バージョンエラーを抑制
-    warnOnUnsupportedTypeScriptVersion: false,
     sourceType: 'module',
+    ecmaVersion: 2019, // Node.js 12の場合は2019、他のバージョンのNode.jsを利用している場合は場合は適宜変更する
+    // warnOnUnsupportedTypeScriptVersion: false,
     jsx: true,
-    project: 'tsconfig.json',
+    project: './tsconfig.json',
+    tsconfigRootDir: __dirname,
     // @see https://github.com/typescript-eslint/typescript-eslint/issues/967
-    createDefaultProgram: true,
+    // createDefaultProgram: true,
   },
 
   settings: {
@@ -70,7 +71,6 @@ module.exports = {
     '@typescript-eslint/member-ordering': 'error',
     '@typescript-eslint/method-signature-style': 'off',
 
-    // 悩ましいがts-ignoreは使わざる得ない場合がある
     camelcase: 'off',
     '@typescript-eslint/naming-convention': [
       'error',
