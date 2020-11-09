@@ -5,7 +5,9 @@
 
 // ref1 'no-duplicate-imports'
 // prettier-ignore
+// eslint-disable-next-line import/no-duplicates
 import { fuga } from 'module'
+// eslint-disable-next-line import/no-duplicates
 import { hoge } from 'module'
 
 const func = () => {}
