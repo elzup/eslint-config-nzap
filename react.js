@@ -14,7 +14,7 @@ module.exports = {
     // 'react/prefer-stateless-function': 2,
     'react/jsx-boolean-value': 2,
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.tsx'] }],
-    'react/jsx-handler-names': 2,
+    'react/jsx-handler-names': 0,
     'react/prefer-es6-class': [2, 'always'],
 
     'react-hooks/rules-of-hooks': 'error',

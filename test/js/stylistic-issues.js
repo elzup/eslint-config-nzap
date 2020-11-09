@@ -1,6 +1,4 @@
 /* eslint-disable no-unused-vars */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/naming-convention */
 /* eslint-disable no-var */
 /* eslint-disable no-unused-expressions */
 import React from 'react'

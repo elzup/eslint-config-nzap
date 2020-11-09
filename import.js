@@ -37,29 +37,8 @@ module.exports = {
     'import/export': 2,
     'import/no-unresolved': 2,
     'import/named': 2,
-    'import/namespace': 2,
-    'import/no-extraneous-dependencies': [
-      2,
-      {
-        devDependencies: [
-          'test/**',
-          'tests/**',
-          'spec/**',
-          '**/__tests__/**',
-          '**/__mocks__/**',
-          'test.{js,jsx,ts,tsx}',
-          'test-*.{js,jsx,ts,tsx}',
-          '**/*.test.{js,jsx,ts,tsx}',
-          '**/webpack.config.js',
-          '**/webpack.config.*.js',
-          '**/jest.config.js',
-          '**/jest.setup.js',
-          '**/rollup.config.js',
-          '**/rollup.config.*.js',
-        ],
-        optionalDependencies: false,
-      },
-    ],
+    'import/namespace': 0,
+    'import/no-extraneous-dependencies': 0,
     'import/no-named-as-default-member': 2,
 
     // ベストプラクティス

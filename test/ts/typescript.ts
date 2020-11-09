@@ -21,6 +21,10 @@
 // OK '@typescript-eslint/member-ordering'
 // OK '@typescript-eslint/method-signature-style'
 // OK '@typescript-eslint/naming-convention'
+const _nc = 0
+
+function nConvention(_hoge: string) {}
+
 // OK '@typescript-eslint/no-base-to-string'
 // OK '@typescript-eslint/no-confusing-non-null-assertion'
 // OK '@typescript-eslint/no-confusing-void-expression'
