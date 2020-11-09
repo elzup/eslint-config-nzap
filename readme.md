@@ -12,7 +12,7 @@
 ## Usage
 
 ```
-npm i -D eslint-config-nzap
+npm i -D eslint-config-nzap prettier
 ```
 
 ## Usage
