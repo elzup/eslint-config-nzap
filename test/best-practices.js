@@ -100,8 +100,8 @@ const gaPairs = {
 
 // NG 'guard-for-in'
 // eslint-disable-next-line guard-for-in
-for (const key in obj) {
-}
+// for (const key in obj) {
+// }
 
 // OK 'max-classes-per-file'
 class McpFile1 {}
