@@ -5,7 +5,7 @@ module.exports = {
     'block-scoped-var': 0,
     'class-methods-use-this': 0,
     complexity: 0,
-    'consistent-return': 2,
+    'consistent-return': 0,
     curly: 0,
     'default-case': 0,
     'default-case-last': 0,

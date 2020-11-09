@@ -45,8 +45,7 @@ function complexity(x) {
   else return 4 // 3rd path
 }
 
-// NG 'consistent-return'
-// eslint-disable-next-line consistent-return
+// OK 'consistent-return'
 function cReturn(condition) {
   if (condition) return true
 }
