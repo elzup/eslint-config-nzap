@@ -21,10 +21,12 @@
     "lint": "eslint -c ./index.js index.js",
     "find-new-rules": "npm-run-all --parallel find-new-rules:*",
     "find-new-rules:ts": "eslint-find-rules --unused -v ./rules/with_typescript.js",
+    "find-new-rules:jest": "eslint-find-rules --unused -v ./test/jest/.eslintrc",
     "find-new-rules:main": "eslint-find-rules --unused -v ./index.js",
     "eslint-check": "eslint --print-config .eslintrc | eslint-config-prettier-check",
-    "test": "npm-run-all --parallel test:*",
+    "test": "npm-run-all --parallel test:* find-new-rules",
     "test:js": "eslint test/js/*",
+    "test:jest": "eslint test/jest/*",
     "test:import": "eslint test/import/*",
     "test:ts": "eslint test/ts/*"
   },
