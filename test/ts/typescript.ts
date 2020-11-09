@@ -1,7 +1,5 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable no-var */
-/* eslint-disable no-unused-expressions */
 
 // OK '@typescript-eslint/adjacent-overload-signatures'
 // OK '@typescript-eslint/array-type'
