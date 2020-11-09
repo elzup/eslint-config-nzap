@@ -9,7 +9,6 @@ module.exports = {
     // warnOnUnsupportedTypeScriptVersion: false,
     jsx: true,
     project: './tsconfig.json',
-    tsconfigRootDir: __dirname,
     // @see https://github.com/typescript-eslint/typescript-eslint/issues/967
     // createDefaultProgram: true,
   },
