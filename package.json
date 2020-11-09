@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-nzap",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "my eslint config",
   "main": "index.js",
   "repository": "elzup/eslint-config-nzap",
