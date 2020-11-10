@@ -50,10 +50,9 @@ module.exports = {
             message: 'Use `object` instead.',
             fixWith: 'object',
           },
-          object: 'Use `{}` instead.',
           Function: 'Use a specific function type instead, like `() => void`.',
-          // TODO: Enforce `undefined` over `null` here too?
         },
+        extendDefaults: false,
       },
     ],
     '@typescript-eslint/class-literal-property-style': 'off',

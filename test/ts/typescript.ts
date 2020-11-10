@@ -7,6 +7,10 @@
 // OK '@typescript-eslint/ban-ts-comment'
 // OK '@typescript-eslint/ban-tslint-comment'
 // OK '@typescript-eslint/ban-types'
+
+type BanType = {}
+const btNoop = () => {}
+
 // OK '@typescript-eslint/class-literal-property-style'
 // OK '@typescript-eslint/consistent-indexed-object-style'
 // OK '@typescript-eslint/consistent-type-assertions'
@@ -19,7 +23,7 @@
 // OK '@typescript-eslint/member-ordering'
 // OK '@typescript-eslint/method-signature-style'
 // OK '@typescript-eslint/naming-convention'
-const _nc = 0
+const nc = 0
 
 function nConvention(_hoge: string) {}
 
