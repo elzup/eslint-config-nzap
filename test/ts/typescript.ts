@@ -4,7 +4,16 @@
 // OK '@typescript-eslint/adjacent-overload-signatures'
 // OK '@typescript-eslint/array-type'
 // OK '@typescript-eslint/await-thenable'
+async function aThenable() {
+  await 'value'
+  const createValue = () => 'value'
+
+  await createValue()
+}
 // OK '@typescript-eslint/ban-ts-comment'
+// @ts-ignore
+// @ts-check
+
 // OK '@typescript-eslint/ban-tslint-comment'
 // OK '@typescript-eslint/ban-types'
 
