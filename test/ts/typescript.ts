@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable no-var */
 
-// OK '@typescript-eslint/adjacent-overload-signatures'
-// OK '@typescript-eslint/array-type'
+// NG '@typescript-eslint/adjacent-overload-signatures'
+// NG '@typescript-eslint/array-type'
 // OK '@typescript-eslint/await-thenable'
 async function aThenable() {
   await 'value'
@@ -11,16 +11,23 @@ async function aThenable() {
   await createValue()
 }
 // OK '@typescript-eslint/ban-ts-comment'
-// @ts-ignore
-// @ts-check
-
 // OK '@typescript-eslint/ban-tslint-comment'
+// @ts-ignore
+// tslint:disable-next-line
+const banComent = 0
+
 // OK '@typescript-eslint/ban-types'
 
 type BanType = {}
 const btNoop = () => {}
 
 // OK '@typescript-eslint/class-literal-property-style'
+class ClpStyle {
+  readonly myField1 = 1
+  readonly myField2 = `hello world`
+  private readonly myField3 = 'hello world'
+}
+
 // OK '@typescript-eslint/consistent-indexed-object-style'
 // OK '@typescript-eslint/consistent-type-assertions'
 // OK '@typescript-eslint/consistent-type-definitions'
