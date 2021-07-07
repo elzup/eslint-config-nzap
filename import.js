@@ -52,6 +52,7 @@ module.exports = {
     'import/no-duplicates': 1, // import type {} に対応してない
     'import/no-dynamic-require': 1, // sometimes it can be handy, shouldn't break a build
     'import/no-internal-modules': 0,
+    'import/no-import-module-exports': 0,
     'import/no-mutable-exports': 2,
     'import/no-restricted-paths': 0,
     'import/no-unassigned-import': 0,
@@ -69,6 +70,7 @@ module.exports = {
     'import/no-cycle': 0, // flowを使っているなら必要性が低い。また計算コストがかかる
     'import/dynamic-import-chunkname': 0, // prettier案件
     // 辛すぎて生産性が落ちる。無効
+    'import/no-relative-packages': 0,
     'import/no-relative-parent-imports': 0,
     'import/no-unused-modules': 0, // TypeScriptで検知できればいい
   },

@@ -207,6 +207,12 @@ function nuFinally() {
 if (!0 in v) {
 }
 
+// NG no-unsafe-optional-chaining
+const nuoc = {}
+
+// eslint-disable-next-line no-unsafe-optional-chaining
+;(nuoc?.foo)()
+
 // OK no-useless-backreference
 ;/^(?:(a)|\1b)$/ // reference to (a) into another alternative
 

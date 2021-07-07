@@ -44,6 +44,7 @@ module.exports = {
     'no-unreachable-loop': 0,
     'no-unsafe-finally': 0,
     'no-unsafe-negation': 2,
+    'no-unsafe-optional-chaining': 2,
     'no-useless-backreference': 0,
     // IDU: I don't understand
     'require-atomic-updates': 0,

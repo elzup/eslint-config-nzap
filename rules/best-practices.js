@@ -46,6 +46,7 @@ module.exports = {
     'no-new': 0,
     'no-new-func': 0,
     'no-new-wrappers': 0,
+    'no-nonoctal-decimal-escape': 0, // [editor]
     'no-octal': 0,
     'no-octal-escape': 0,
     'no-param-reassign': 2,

@@ -241,6 +241,9 @@ var nnFunc = Function('a', 'b', 'return a + b')
 // OK 'no-new-wrappers'
 var nnWraps = new String('hello')
 
+// OK 'no-nonoctal-decimal-escape'
+// "\8"
+
 // OK 'no-octal'
 // var nOct = 071
 
