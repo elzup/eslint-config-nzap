@@ -1,6 +1,6 @@
 # eslint-config-nzap
 
-[![npm version](https://badge.fury.io/js/chch.svg)](https://badge.fury.io/js/eslint-config-nzap)
+[![npm version](https://badge.fury.io/js/eslint-config-nzap.svg)](https://badge.fury.io/js/eslint-config-nzap)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Policy
