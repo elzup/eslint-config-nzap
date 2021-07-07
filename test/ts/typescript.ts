@@ -1,6 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable no-var */
 
+type Alice = 'alice'
+type Bob = 'bob'
+
 // NG '@typescript-eslint/adjacent-overload-signatures'
 // NG '@typescript-eslint/array-type'
 // OK '@typescript-eslint/await-thenable'
@@ -61,7 +64,11 @@ function nConvention(_hoge: string) {}
 // OK '@typescript-eslint/no-misused-promises'
 // OK '@typescript-eslint/no-namespace'
 // OK '@typescript-eslint/no-non-null-asserted-optional-chain'
-// OK '@typescript-eslint/no-non-null-assertion'
+// NG '@typescript-eslint/no-non-null-assertion'
+const nnna = Math.random() > 0.5 ? '' : undefined
+// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+const definitely = nnna!
+
 // OK '@typescript-eslint/no-parameter-properties'
 // OK '@typescript-eslint/no-require-imports'
 // OK '@typescript-eslint/no-this-alias'
@@ -78,6 +85,8 @@ function nConvention(_hoge: string) {}
 // OK '@typescript-eslint/no-unsafe-member-access'
 // OK '@typescript-eslint/no-unsafe-return'
 // OK '@typescript-eslint/no-var-requires'
+
+// OK '@typescript-eslint/non-nullable-type-assertion-style'
 // OK '@typescript-eslint/prefer-as-const'
 // OK '@typescript-eslint/prefer-enum-initializers'
 // OK '@typescript-eslint/prefer-for-of'
@@ -135,5 +144,8 @@ function nConvention(_hoge: string) {}
 // OK '@typescript-eslint/require-await'
 // OK '@typescript-eslint/return-await'
 // OK '@typescript-eslint/semi'
+// OK '@typescript-eslint/sort-type-union-intersection-members'
+type Stuim = Bob | Alice
+
 // OK '@typescript-eslint/space-before-function-paren'
 // OK '@typescript-eslint/space-infix-ops'

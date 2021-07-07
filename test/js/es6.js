@@ -19,7 +19,7 @@ class Item {}
 // OK 'arrow-parens'
 // OK 'arrow-spacing'
 // prettier-ignore
-;v=> 0
+v=> 0
 
 // OK 'constructor-super'
 class cSuper {
@@ -124,11 +124,8 @@ func(...[1, 2, 3])
 
 // OK 'sort-imports'
 // OK 'symbol-description'
-const sDesc = Symbol()
-
-// OK 'template-curly-spacing'
-// prettier-ignore
-;`lint, ${ 100}!`
+const sDesc = Symbol() // prettier-ignore // OK 'template-curly-spacing'
+`lint, ${100}!`
 
 // OK 'yield-star-spacing'
 function* ysSpacing() {

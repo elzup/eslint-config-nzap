@@ -38,6 +38,7 @@ console.log('ok')
 // OK prefer-todo
 // OK require-to-throw-message
 // OK require-top-level-describe
+// OK unbound-method
 // OK valid-describe
 // OK valid-expect
 // OK valid-expect-in-promise
