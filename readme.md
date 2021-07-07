@@ -2,6 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/eslint-config-nzap.svg)](https://badge.fury.io/js/eslint-config-nzap)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![test](https://github.com/elzup/eslint-config-nzap/actions/workflows/node.js.yml/badge.svg)](https://github.com/elzup/eslint-config-nzap/actions/workflows/node.js.yml)
 
 ## Policy
 
