@@ -95,7 +95,7 @@ const fpNewline = (a, b) => 0
 //   func()
 
 // OK 'jsx-quotes'
-const jQuotes = () => <a b="c" />
+// const jQuotes = () => <a b="c" />
 
 // OK 'key-spacing'
 // prettier-ignore

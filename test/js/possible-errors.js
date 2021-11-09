@@ -210,6 +210,18 @@ if (!0 in v) {
 // NG no-unsafe-optional-chaining
 const nuoc = {}
 
+// OK no-unused-private-class-members
+class NupcMembers {
+  #unusedMember = 5
+}
+
+class NupcMembers2 {
+  #usedOnlyInWrite = 5
+  method() {
+    this.#usedOnlyInWrite = 42
+  }
+}
+
 // eslint-disable-next-line no-unsafe-optional-chaining
 ;(nuoc?.foo)()
 

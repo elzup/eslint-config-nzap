@@ -3,8 +3,7 @@ module.exports = {
     'arrow-body-style': 0,
     'arrow-parens': 0,
     'arrow-spacing': 0,
-    // 書くことがない
-    'constructor-super': 0,
+    'constructor-super': 0, // default Error
     'generator-star-spacing': 0,
     'no-class-assign': 2,
     'no-confusing-arrow': 0,

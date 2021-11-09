@@ -45,6 +45,7 @@ module.exports = {
     'no-unsafe-finally': 0,
     'no-unsafe-negation': 2,
     'no-unsafe-optional-chaining': 2,
+    'no-unused-private-class-members': 0,
     'no-useless-backreference': 0,
     // IDU: I don't understand
     'require-atomic-updates': 0,

@@ -1,13 +1,12 @@
 module.exports = {
-  parser: 'babel-eslint',
   parserOptions: {
-    ecmaVersion: 2019,
+    ecmaVersion: 'latest',
     sourceType: 'module',
     ecmaFeatures: {
       experimentalObjectRestSpread: true,
     },
   },
-  env: { browser: true, node: true, es6: true },
+  env: { browser: true, node: true, es2021: true },
   extends: [
     './rules/possible-errors.js',
     './rules/best-practices.js',

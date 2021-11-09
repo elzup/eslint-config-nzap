@@ -21,12 +21,12 @@ class Item {}
 // prettier-ignore
 v=> 0
 
-// OK 'constructor-super'
-class cSuper {
-  constructor() {
-    super() // This is a SyntaxError.
-  }
-}
+// NG 'constructor-super'
+// class cSuper {
+//   constructor() {
+//     super() // This is a SyntaxError.
+//   }
+// }
 
 // OK 'generator-star-spacing'
 // prettier-ignore
