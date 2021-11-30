@@ -41,8 +41,8 @@
     "eslint-plugin-react-hooks": "^4.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.16.0",
-    "@babel/eslint-parser": "^7.16.0",
+    "@babel/core": "7.16.0",
+    "@babel/eslint-parser": "7.16.3",
     "@types/react": "17.0.34",
     "eslint": "^8.2.0",
     "eslint-find-rules": "4.0.0",
