@@ -102,6 +102,9 @@ const pDestr = v[0]
 // OK 'prefer-numeric-literals'
 parseInt('111110111', 2) === 503
 
+// OK 'prefer-object-has-own'
+Object.prototype.hasOwnProperty.call(obj, 'a')
+
 // OK 'prefer-rest-params'
 function prParams() {
   func(arguments)

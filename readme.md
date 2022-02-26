@@ -8,6 +8,7 @@
 
 - Processing weight reduction
   - Fewer enabled rules
+  - Don't uselessly check the rules for writing that you don't normally
 - Does not hinder development freedom
 
 ## Usage

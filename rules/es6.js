@@ -23,6 +23,7 @@ module.exports = {
     'prefer-const': 0,
     'prefer-destructuring': 0,
     'prefer-numeric-literals': 0,
+    'prefer-object-has-own': 0,
     'prefer-rest-params': 0,
     'prefer-spread': 0,
     'prefer-template': 0,

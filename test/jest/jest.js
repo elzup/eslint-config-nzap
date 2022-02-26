@@ -8,6 +8,7 @@ console.log('ok')
 // OK no-alias-methods
 // OK no-commented-out-tests
 // OK no-conditional-expect
+// OK no-conditional-in-test
 // OK no-deprecated-functions
 // OK no-disabled-tests
 // OK no-done-callback
@@ -27,8 +28,12 @@ console.log('ok')
 // OK no-test-prefixes
 // OK no-test-return-statement
 // OK prefer-called-with
+// OK prefer-comparison-matcher
+// OK prefer-equality-matcher
 // OK prefer-expect-assertions
 // OK prefer-hooks-on-top
+// OK prefer-lowercase-title
+// OK prefer-snapshot-hint
 // OK prefer-spy-on
 // OK prefer-strict-equal
 // OK prefer-to-be-null
