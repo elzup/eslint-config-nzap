@@ -156,7 +156,7 @@ module.exports = {
     '@typescript-eslint/require-array-sort-compare': 'error',
     '@typescript-eslint/restrict-plus-operands': 'error',
     '@typescript-eslint/restrict-template-expressions': 'off',
-    '@typescript-eslint/strict-boolean-expressions': 'off',
+    '@typescript-eslint/strict-boolean-expressions': 'error',
     '@typescript-eslint/switch-exhaustiveness-check': 'off',
     '@typescript-eslint/triple-slash-reference': ['error', { path: 'never' }],
     '@typescript-eslint/type-annotation-spacing': 'off',
@@ -215,5 +215,9 @@ module.exports = {
     '@typescript-eslint/sort-type-union-intersection-members': 'off',
     '@typescript-eslint/space-before-function-paren': 'off',
     '@typescript-eslint/space-infix-ops': 'off',
+
+    // tmp non document category
+    '@typescript-eslint/no-redundant-type-constituents': 'off',
+    '@typescript-eslint/no-useless-empty-export': 'off',
   },
 }
