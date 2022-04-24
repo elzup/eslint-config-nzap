@@ -44,6 +44,9 @@ const ncArrow = a => 1 ? 2 : 3
 // const ncAssign = 0
 // ncAssign = 1
 
+// NG 'no-constant-binary-expression'
+const ncbExpression = +0 === null
+
 // NG 'no-dupe-class-members'
 class NdcMembers {
   bar() {}

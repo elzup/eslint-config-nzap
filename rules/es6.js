@@ -8,6 +8,7 @@ module.exports = {
     'no-class-assign': 2,
     'no-confusing-arrow': 0,
     'no-const-assign': 2,
+    'no-constant-binary-expression': 0,
     'no-dupe-class-members': 2,
     'no-duplicate-imports': 0,
     'no-new-symbol': 0,
