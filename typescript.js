@@ -135,6 +135,7 @@ module.exports = {
     '@typescript-eslint/no-unsafe-return': 'off',
     '@typescript-eslint/no-var-requires': 'error',
     '@typescript-eslint/non-nullable-type-assertion-style': 'off',
+    '@typescript-eslint/parameter-properties': 'off',
     '@typescript-eslint/padding-line-between-statements': 'off',
     '@typescript-eslint/prefer-as-const': 'off',
     '@typescript-eslint/prefer-enum-initializers': 'off',

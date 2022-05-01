@@ -87,6 +87,7 @@ const definitely = nnna!
 // OK '@typescript-eslint/no-var-requires'
 
 // OK '@typescript-eslint/non-nullable-type-assertion-style'
+// OK '@typescript-eslint/parameter-properties'
 // OK '@typescript-eslint/prefer-as-const'
 // OK '@typescript-eslint/prefer-enum-initializers'
 // OK '@typescript-eslint/prefer-for-of'
