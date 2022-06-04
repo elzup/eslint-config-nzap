@@ -127,6 +127,7 @@ const definitely = nnna!
 // OK '@typescript-eslint/lines-between-class-members'
 // OK '@typescript-eslint/no-array-constructor'
 // OK '@typescript-eslint/no-dupe-class-members'
+// OK '@typescript-eslint/no-duplicate-enum-values
 // OK '@typescript-eslint/no-duplicate-imports'
 // OK '@typescript-eslint/no-empty-function'
 // OK '@typescript-eslint/no-extra-parens'

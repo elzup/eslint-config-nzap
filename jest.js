@@ -32,6 +32,7 @@ module.exports = {
     'jest/prefer-equality-matcher': 0,
     'jest/prefer-expect-assertions': 0,
     'jest/prefer-expect-resolves': 0,
+    'jest/prefer-hooks-in-order': 0,
     'jest/prefer-hooks-on-top': 0,
     'jest/prefer-lowercase-title': 2,
     'jest/prefer-snapshot-hint': 2,
