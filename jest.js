@@ -4,6 +4,7 @@ module.exports = {
     'jest/consistent-test-it': 2,
     'jest/expect-expect': 2, // TODO: 一旦入れて様子見
     'jest/lowercase-name': 0,
+    'jest/max-expects': 0,
     'jest/max-nested-describe': 0,
     'jest/no-alias-methods': 2,
     'jest/no-commented-out-tests': 0,
