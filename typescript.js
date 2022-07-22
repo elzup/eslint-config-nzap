@@ -169,7 +169,7 @@ module.exports = {
     '@typescript-eslint/type-annotation-spacing': 'off',
     '@typescript-eslint/typedef': 'off',
     '@typescript-eslint/unbound-method': 'off',
-    '@typescript-eslint/unified-signatures': 'error',
+    '@typescript-eslint/unified-signatures': 'off',
 
     //
     // extension
