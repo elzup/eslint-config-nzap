@@ -107,7 +107,16 @@ const definitely = nnna!
 // OK '@typescript-eslint/require-array-sort-compare'
 // OK '@typescript-eslint/restrict-plus-operands'
 // OK '@typescript-eslint/restrict-template-expressions'
-// OK '@typescript-eslint/strict-boolean-expressions'
+// NG '@typescript-eslint/strict-boolean-expressions'
+
+// const strictBe = 0
+// if (strictBe) {
+// }
+const strictBeObj: { a: number } | null = null
+
+if (strictBeObj) {
+}
+
 // OK '@typescript-eslint/switch-exhaustiveness-check'
 // OK '@typescript-eslint/triple-slash-reference'
 // OK '@typescript-eslint/type-annotation-spacing'
