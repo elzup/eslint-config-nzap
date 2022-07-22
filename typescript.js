@@ -180,6 +180,7 @@ module.exports = {
     '@typescript-eslint/lines-between-class-members': 'off',
     '@typescript-eslint/no-array-constructor': 'off',
     '@typescript-eslint/no-dupe-class-members': 'off',
+    '@typescript-eslint/no-duplicate-enum-values': 'off',
     '@typescript-eslint/no-duplicate-imports': 'off',
     '@typescript-eslint/no-empty-function': 'off',
     '@typescript-eslint/no-extra-parens': 'off',
