@@ -162,7 +162,6 @@ module.exports = {
       {
         allowString: false,
         allowNumber: false,
-        allowNullableObject: true,
       },
     ],
     '@typescript-eslint/switch-exhaustiveness-check': 'off',
@@ -178,6 +177,7 @@ module.exports = {
     '@typescript-eslint/brace-style': 'off',
     '@typescript-eslint/comma-dangle': 'off',
     '@typescript-eslint/comma-spacing': 'off',
+    '@typescript-eslint/consistent-generic-constructors': 'off',
     '@typescript-eslint/default-param-last': 'off',
     '@typescript-eslint/dot-notation': 'off',
     '@typescript-eslint/func-call-spacing': 'off',

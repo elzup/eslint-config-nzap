@@ -96,6 +96,11 @@ const definitely = nnna!
 // OK '@typescript-eslint/prefer-literal-enum-member'
 // OK '@typescript-eslint/prefer-namespace-keyword'
 // OK '@typescript-eslint/prefer-nullish-coalescing'
+
+function pnc(foo: string | null) {
+  return false || 'a string'
+}
+
 // OK '@typescript-eslint/prefer-optional-chain'
 // OK '@typescript-eslint/prefer-readonly'
 // OK '@typescript-eslint/prefer-readonly-parameter-types'
@@ -109,12 +114,9 @@ const definitely = nnna!
 // OK '@typescript-eslint/restrict-template-expressions'
 // NG '@typescript-eslint/strict-boolean-expressions'
 
-// const strictBe = 0
-// if (strictBe) {
-// }
-const strictBeObj: { a: number } | null = null
-
-if (strictBeObj) {
+function sbEx(o0: object | null, o1?: object): number {
+  if (o0) return 0
+  return o1 ? 0 : 1
 }
 
 // OK '@typescript-eslint/switch-exhaustiveness-check'
@@ -127,6 +129,7 @@ if (strictBeObj) {
 // OK '@typescript-eslint/brace-style'
 // OK '@typescript-eslint/comma-dangle'
 // OK '@typescript-eslint/comma-spacing'
+// OK '@typescript-eslint/consistent-generic-constructors'
 // OK '@typescript-eslint/default-param-last'
 // OK '@typescript-eslint/dot-notation'
 // OK '@typescript-eslint/func-call-spacing'
