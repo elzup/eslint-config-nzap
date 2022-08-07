@@ -35,7 +35,7 @@ module.exports = {
     // エラーが望ましい
     'import/default': 2,
     'import/export': 2,
-    'import/no-unresolved': 2,
+    'import/no-unresolved': 0,
     'import/named': 2,
     'import/namespace': 0,
     'import/no-extraneous-dependencies': 0,
