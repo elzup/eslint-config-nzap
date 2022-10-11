@@ -13,6 +13,11 @@ function iDec() {
   let bar
 }
 
+// OK 'logical-assignment-operators'
+let lao = 1
+
+lao = lao || 2
+
 // OK 'no-delete-var'
 var ndVar
 // delete ndVar

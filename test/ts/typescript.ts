@@ -114,7 +114,7 @@ function pnc(foo: string | null) {
 // OK '@typescript-eslint/restrict-template-expressions'
 // NG '@typescript-eslint/strict-boolean-expressions'
 
-function sbEx(o0: object | null, o1?: object): number {
+function sbEx(o0: object | null | undefined, o1?: object): number {
   if (o0) return 0
   return o1 ? 0 : 1
 }
