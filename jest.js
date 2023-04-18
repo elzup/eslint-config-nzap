@@ -28,6 +28,7 @@ module.exports = {
     'jest/no-standalone-expect': 0,
     'jest/no-test-prefixes': 2,
     'jest/no-test-return-statement': 2,
+    'jest/no-untyped-mock-factory': 0,
     'jest/prefer-called-with': 2,
     'jest/prefer-comparison-matcher': 0,
     'jest/prefer-each': 0,
