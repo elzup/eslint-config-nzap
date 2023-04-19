@@ -23,6 +23,7 @@ module.exports = {
     'no-div-regex': 0,
     'no-else-return': 0,
     'no-empty-function': 0,
+    'no-empty-static-block': 0,
     'no-empty-pattern': 0,
     'no-eq-null': 0,
     'no-eval': 2,

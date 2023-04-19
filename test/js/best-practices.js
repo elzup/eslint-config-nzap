@@ -146,6 +146,11 @@ function neReturn() {
 // OK 'no-empty-function'
 function neFunc() {}
 
+// OK 'no-empty-static-block'
+class Nesb {
+  static {}
+}
+
 // OK 'no-empty-pattern'
 const {} = obj
 
@@ -229,7 +234,8 @@ const nmNum = 100,
 if(v   === "bar") {}
 
 // OK 'no-multi-str'
-const nmStr = 'Line 1 \
+const nmStr =
+  'Line 1 \
 Line 2'
 
 // OK 'no-new'

@@ -57,7 +57,7 @@ module.exports = {
     '@typescript-eslint/class-literal-property-style': 'off',
     '@typescript-eslint/consistent-indexed-object-style': 'off',
     '@typescript-eslint/consistent-type-assertions': 'off',
-    '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+    '@typescript-eslint/consistent-type-definitions': 'off',
     '@typescript-eslint/consistent-type-exports': 'off',
     '@typescript-eslint/consistent-type-imports': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
@@ -93,7 +93,7 @@ module.exports = {
     '@typescript-eslint/no-confusing-non-null-assertion': 'off',
     '@typescript-eslint/no-confusing-void-expression': 'off',
     '@typescript-eslint/no-dynamic-delete': 'off',
-    '@typescript-eslint/no-empty-interface': 'error',
+    '@typescript-eslint/no-empty-interface': 'off',
     '@typescript-eslint/no-explicit-any': [
       'error',
       {
@@ -105,12 +105,14 @@ module.exports = {
     '@typescript-eslint/no-extraneous-class': 'off',
     '@typescript-eslint/no-floating-promises': 'off',
     '@typescript-eslint/no-for-in-array': 'error',
+    '@typescript-eslint/no-import-type-side-effects': 'off',
     '@typescript-eslint/no-implicit-any-catch': 'off',
     '@typescript-eslint/no-implied-eval': 'off',
     '@typescript-eslint/no-inferrable-types': 'error',
     '@typescript-eslint/no-invalid-void-type': 'off',
     '@typescript-eslint/no-misused-new': 'error',
     '@typescript-eslint/no-misused-promises': 'off',
+    '@typescript-eslint/no-mixed-enums': 'off',
     '@typescript-eslint/no-namespace': 'error',
 
     '@typescript-eslint/no-non-null-asserted-nullish-coalescing': 'off',
@@ -131,6 +133,8 @@ module.exports = {
     '@typescript-eslint/no-unsafe-argument': 'off',
     '@typescript-eslint/no-unsafe-assignment': 'off',
     '@typescript-eslint/no-unsafe-call': 'off',
+    '@typescript-eslint/no-unsafe-declaration-merging': 'off', // unreachable [no-redeclare]
+    '@typescript-eslint/no-unsafe-enum-comparison': 'off', // unreachable [ts]
     '@typescript-eslint/no-unsafe-member-access': 'off',
     '@typescript-eslint/no-unsafe-return': 'off',
     '@typescript-eslint/no-var-requires': 'error',
@@ -157,6 +161,7 @@ module.exports = {
     '@typescript-eslint/require-array-sort-compare': 'error',
     '@typescript-eslint/restrict-plus-operands': 'error',
     '@typescript-eslint/restrict-template-expressions': 'off',
+    '@typescript-eslint/sort-type-constituents': 'off',
     '@typescript-eslint/strict-boolean-expressions': [
       'error',
       {
@@ -188,6 +193,7 @@ module.exports = {
     '@typescript-eslint/no-array-constructor': 'off',
     '@typescript-eslint/no-dupe-class-members': 'off',
     '@typescript-eslint/no-duplicate-enum-values': 'off',
+    '@typescript-eslint/no-duplicate-type-constituents': 'off',
     '@typescript-eslint/no-duplicate-imports': 'off',
     '@typescript-eslint/no-empty-function': 'off',
     '@typescript-eslint/no-extra-parens': 'off',

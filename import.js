@@ -73,5 +73,7 @@ module.exports = {
     'import/no-relative-packages': 0,
     'import/no-relative-parent-imports': 0,
     'import/no-unused-modules': 0, // TypeScriptで検知できればいい
+    'import/consistent-type-specifier-style': 0,
+    'import/no-empty-named-blocks': 0,
   },
 }

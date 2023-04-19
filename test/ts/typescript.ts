@@ -1,6 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable no-var */
 
+// OK '@typescript-eslint/no-import-type-side-effects'
+import {} from 'react'
+
 type Alice = 'alice'
 type Bob = 'bob'
 
@@ -51,17 +54,26 @@ function nConvention(_hoge: string) {}
 // OK '@typescript-eslint/no-confusing-void-expression'
 // OK '@typescript-eslint/no-dynamic-delete'
 // OK '@typescript-eslint/no-empty-interface'
+interface Nei {}
 // OK '@typescript-eslint/no-explicit-any'
 // OK '@typescript-eslint/no-extra-non-null-assertion'
 // OK '@typescript-eslint/no-extraneous-class'
 // OK '@typescript-eslint/no-floating-promises'
 // OK '@typescript-eslint/no-for-in-array'
+
 // OK '@typescript-eslint/no-implicit-any-catch'
 // OK '@typescript-eslint/no-implied-eval'
 // OK '@typescript-eslint/no-inferrable-types'
 // OK '@typescript-eslint/no-invalid-void-type'
 // OK '@typescript-eslint/no-misused-new'
 // OK '@typescript-eslint/no-misused-promises'
+// OK '@typescript-eslint/no-mixed-enums'
+enum Status {
+  Unknown,
+  Closed = 1,
+  Open = 'open',
+}
+
 // OK '@typescript-eslint/no-namespace'
 // OK '@typescript-eslint/no-non-null-asserted-optional-chain'
 // NG '@typescript-eslint/no-non-null-assertion'
@@ -82,6 +94,11 @@ const definitely = nnna!
 // OK '@typescript-eslint/no-unnecessary-type-constraint'
 // OK '@typescript-eslint/no-unsafe-assignment'
 // OK '@typescript-eslint/no-unsafe-call'
+// OK '@typescript-eslint/no-unsafe-declaration-merging'
+// unreachable
+// interface Nudm {}
+// class Nudm {}
+// OK '@typescript-eslint/no-unsafe-enum-comparison'
 // OK '@typescript-eslint/no-unsafe-member-access'
 // OK '@typescript-eslint/no-unsafe-return'
 // OK '@typescript-eslint/no-var-requires'
@@ -112,6 +129,9 @@ function pnc(foo: string | null) {
 // OK '@typescript-eslint/require-array-sort-compare'
 // OK '@typescript-eslint/restrict-plus-operands'
 // OK '@typescript-eslint/restrict-template-expressions'
+// OK '@typescript-eslint/sort-type-constituents'
+type Stc = 'b' | 'a'
+
 // NG '@typescript-eslint/strict-boolean-expressions'
 
 function sbEx(o0: object | null | undefined, o1?: object): number {
@@ -140,6 +160,9 @@ function sbEx(o0: object | null | undefined, o1?: object): number {
 // OK '@typescript-eslint/no-array-constructor'
 // OK '@typescript-eslint/no-dupe-class-members'
 // OK '@typescript-eslint/no-duplicate-enum-values
+// OK '@typescript-eslint/no-duplicate-type-constituents'
+type Tndtc = string | string | `A` | `A`
+
 // OK '@typescript-eslint/no-duplicate-imports'
 // OK '@typescript-eslint/no-empty-function'
 // OK '@typescript-eslint/no-extra-parens'
