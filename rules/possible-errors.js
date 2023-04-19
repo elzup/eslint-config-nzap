@@ -30,6 +30,7 @@ module.exports = {
     // 重い
     'no-loss-of-precision': 0,
     'no-misleading-character-class': 0,
+    'no-new-native-nonconstructor': 0,
     'no-obj-calls': 0,
     'no-promise-executor-return': 0,
     'no-prototype-builtins': 0,

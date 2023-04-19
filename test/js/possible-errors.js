@@ -143,6 +143,9 @@ RegExp('[')
 // OK no-misleading-character-class
 const nmcClass = /^[👍]$/
 
+// OK no-misleading-character-class
+const nmcc = new BigInt(9007199254740991)
+
 // OK no-obj-calls
 const noCalls = new Math()
 
