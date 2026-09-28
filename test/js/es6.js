@@ -18,7 +18,7 @@ class Item {}
 // OK 'arrow-body-style'
 // OK 'arrow-parens'
 // OK 'arrow-spacing'
-// prettier-ignore
+// eslint-disable-next-line prettier/prettier
 v=> 0
 
 // NG 'constructor-super'

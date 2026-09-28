@@ -12,6 +12,7 @@ module.exports = {
   },
   rules: {
     // 文法
+    'import/enforce-node-protocol-usage': 0,
     'import/extensions': 2,
     'import/newline-after-import': 2,
     'import/no-named-as-default': 2,

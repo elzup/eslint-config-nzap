@@ -28,6 +28,7 @@ type BanType = {}
 const btNoop = () => {}
 
 // OK '@typescript-eslint/class-literal-property-style'
+// OK '@typescript-eslint/class-methods-use-this'
 class ClpStyle {
   readonly myField1 = 1
   readonly myField2 = `hello world`
@@ -35,6 +36,7 @@ class ClpStyle {
 }
 
 // OK '@typescript-eslint/consistent-indexed-object-style'
+// OK '@typescript-eslint/consistent-return'
 // OK '@typescript-eslint/consistent-type-assertions'
 // OK '@typescript-eslint/consistent-type-definitions'
 // OK '@typescript-eslint/consistent-type-imports'
@@ -43,16 +45,19 @@ class ClpStyle {
 // OK '@typescript-eslint/explicit-module-boundary-types'
 // OK '@typescript-eslint/member-delimiter-style'
 // OK '@typescript-eslint/member-ordering'
+// OK '@typescript-eslint/max-params'
 // OK '@typescript-eslint/method-signature-style'
 // OK '@typescript-eslint/naming-convention'
 const nc = 0
 
 function nConvention(_hoge: string) {}
 
+// OK '@typescript-eslint/no-array-delete'
 // OK '@typescript-eslint/no-base-to-string'
 // OK '@typescript-eslint/no-confusing-non-null-assertion'
 // OK '@typescript-eslint/no-confusing-void-expression'
 // OK '@typescript-eslint/no-dynamic-delete'
+// OK '@typescript-eslint/no-empty-object-type'
 // OK '@typescript-eslint/no-empty-interface'
 interface Nei {}
 // OK '@typescript-eslint/no-explicit-any'
@@ -61,7 +66,6 @@ interface Nei {}
 // OK '@typescript-eslint/no-floating-promises'
 // OK '@typescript-eslint/no-for-in-array'
 
-// OK '@typescript-eslint/no-implicit-any-catch'
 // OK '@typescript-eslint/no-implied-eval'
 // OK '@typescript-eslint/no-inferrable-types'
 // OK '@typescript-eslint/no-invalid-void-type'
@@ -81,17 +85,19 @@ const nnna = Math.random() > 0.5 ? '' : undefined
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 const definitely = nnna!
 
-// OK '@typescript-eslint/no-parameter-properties'
 // OK '@typescript-eslint/no-require-imports'
 // OK '@typescript-eslint/no-this-alias'
 // OK '@typescript-eslint/no-throw-literal'
 // OK '@typescript-eslint/no-type-alias'
 // OK '@typescript-eslint/no-unnecessary-boolean-literal-compare'
 // OK '@typescript-eslint/no-unnecessary-condition'
+// OK '@typescript-eslint/no-unnecessary-parameter-property-assignment'
 // OK '@typescript-eslint/no-unnecessary-qualifier'
+// OK '@typescript-eslint/no-unnecessary-template-expression'
 // OK '@typescript-eslint/no-unnecessary-type-arguments'
 // OK '@typescript-eslint/no-unnecessary-type-assertion'
 // OK '@typescript-eslint/no-unnecessary-type-constraint'
+// OK '@typescript-eslint/no-unnecessary-type-parameters'
 // OK '@typescript-eslint/no-unsafe-assignment'
 // OK '@typescript-eslint/no-unsafe-call'
 // OK '@typescript-eslint/no-unsafe-declaration-merging'
@@ -99,14 +105,20 @@ const definitely = nnna!
 // interface Nudm {}
 // class Nudm {}
 // OK '@typescript-eslint/no-unsafe-enum-comparison'
+// OK '@typescript-eslint/no-unsafe-function-type'
 // OK '@typescript-eslint/no-unsafe-member-access'
 // OK '@typescript-eslint/no-unsafe-return'
+// OK '@typescript-eslint/no-unsafe-unary-minus'
 // OK '@typescript-eslint/no-var-requires'
+// OK '@typescript-eslint/no-wrapper-object-types'
 
 // OK '@typescript-eslint/non-nullable-type-assertion-style'
+// OK '@typescript-eslint/only-throw-error'
 // OK '@typescript-eslint/parameter-properties'
 // OK '@typescript-eslint/prefer-as-const'
+// OK '@typescript-eslint/prefer-destructuring'
 // OK '@typescript-eslint/prefer-enum-initializers'
+// OK '@typescript-eslint/prefer-find'
 // OK '@typescript-eslint/prefer-for-of'
 // OK '@typescript-eslint/prefer-function-type'
 // OK '@typescript-eslint/prefer-includes'
@@ -119,6 +131,7 @@ function pnc(foo: string | null) {
 }
 
 // OK '@typescript-eslint/prefer-optional-chain'
+// OK '@typescript-eslint/prefer-promise-reject-errors'
 // OK '@typescript-eslint/prefer-readonly'
 // OK '@typescript-eslint/prefer-readonly-parameter-types'
 // OK '@typescript-eslint/prefer-reduce-type-parameter'
@@ -145,6 +158,7 @@ function sbEx(o0: object | null | undefined, o1?: object): number {
 // OK '@typescript-eslint/typedef'
 // OK '@typescript-eslint/unbound-method'
 // OK '@typescript-eslint/unified-signatures'
+// OK '@typescript-eslint/use-unknown-in-catch-callback-variable'
 
 // OK '@typescript-eslint/brace-style'
 // OK '@typescript-eslint/comma-dangle'
@@ -163,7 +177,6 @@ function sbEx(o0: object | null | undefined, o1?: object): number {
 // OK '@typescript-eslint/no-duplicate-type-constituents'
 type Tndtc = string | string | `A` | `A`
 
-// OK '@typescript-eslint/no-duplicate-imports'
 // OK '@typescript-eslint/no-empty-function'
 // OK '@typescript-eslint/no-extra-parens'
 // OK '@typescript-eslint/no-extra-semi'
@@ -181,8 +194,5 @@ type Tndtc = string | string | `A` | `A`
 // OK '@typescript-eslint/require-await'
 // OK '@typescript-eslint/return-await'
 // OK '@typescript-eslint/semi'
-// OK '@typescript-eslint/sort-type-union-intersection-members'
-type Stuim = Bob | Alice
-
 // OK '@typescript-eslint/space-before-function-paren'
 // OK '@typescript-eslint/space-infix-ops'

@@ -335,7 +335,7 @@ if (!v) {
 var nnt1, nnt2, nnt3
 const nnt = nnt1 ? nnt2 : nnt3 === nnt1 ? nnt2 : nnt3
 
-// OK 'no-new-object'
+// OK 'no-object-constructor'
 new Object()
 
 // OK 'no-plusplus'
