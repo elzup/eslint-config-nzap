@@ -206,7 +206,7 @@ function nuFinally() {
 }
 
 // NG no-unsafe-negation
-// eslint-disable-next-line no-unsafe-negation
+// eslint-disable-next-line no-unsafe-negation, prettier/prettier
 if (!0 in v) {
 }
 
